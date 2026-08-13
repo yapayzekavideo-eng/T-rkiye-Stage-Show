@@ -7,7 +7,6 @@
 <title>Türkiye Stage Show | TSS</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -19,9 +18,9 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
     background:#050505;
     color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 a{
@@ -29,18 +28,18 @@ a{
     color:inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
-    height:78px;
-    background:rgba(5,5,5,.98);
-    border-bottom:1px solid #3a321d;
+    height:76px;
+    padding:0 5%;
+    background:#050505;
+    border-bottom:1px solid #29230f;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 5%;
+
     position:sticky;
     top:0;
     z-index:1000;
@@ -49,40 +48,40 @@ header{
 .logo{
     display:flex;
     align-items:center;
-    gap:14px;
+    gap:12px;
 }
 
 .logo-main{
-    font-size:38px;
+    color:#d4af37;
+    font-size:36px;
     font-weight:900;
     letter-spacing:-2px;
-    color:#d4af37;
 }
 
 .logo-line{
     width:1px;
-    height:40px;
-    background:#6f5b25;
+    height:34px;
+    background:#665521;
 }
 
 .logo-text{
-    font-size:12px;
+    color:#aaa;
+    font-size:9px;
     line-height:1.1;
     letter-spacing:2px;
     font-weight:bold;
-    color:#d8d8d8;
 }
 
 nav{
     display:flex;
-    align-items:center;
-    gap:30px;
+    gap:27px;
 }
 
 nav a{
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
-    transition:.25s;
+    color:#ddd;
+    transition:.2s;
 }
 
 nav a:hover{
@@ -91,526 +90,448 @@ nav a:hover{
 
 .vote-top{
     border:1px solid #d4af37;
-    padding:12px 22px;
-    border-radius:25px;
-    color:#e5c65a;
-    transition:.25s;
-}
-
-.vote-top:hover{
-    background:#d4af37;
-    color:#000;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:610px;
-    display:flex;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-
-    background:
-    radial-gradient(
-        circle at 75% 40%,
-        rgba(212,175,55,.30),
-        transparent 30%
-    ),
-    radial-gradient(
-        circle at 90% 70%,
-        rgba(255,215,100,.14),
-        transparent 25%
-    ),
-    linear-gradient(
-        120deg,
-        #050505,
-        #17140b,
-        #050505
-    );
-}
-
-.hero:after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:
-        linear-gradient(
-            90deg,
-            #050505 5%,
-            transparent 65%,
-            #050505
-        );
-    pointer-events:none;
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-}
-
-.kicker{
     color:#d4af37;
-    font-size:15px;
+    padding:11px 20px;
+    border-radius:4px;
     font-weight:bold;
-    letter-spacing:3px;
-    margin-bottom:15px;
+    font-size:12px;
 }
 
-.hero h1{
-    font-size:clamp(50px,7vw,95px);
-    line-height:.88;
-    max-width:750px;
-    font-weight:900;
+/* MAIN */
+
+main{
+    width:92%;
+    max-width:1350px;
+    margin:35px auto 80px;
+}
+
+/* INTRO */
+
+.intro{
+    margin-bottom:25px;
+}
+
+.intro small{
+    color:#d4af37;
+    font-size:11px;
+    letter-spacing:4px;
+    font-weight:bold;
+}
+
+.intro h1{
+    font-size:clamp(45px,7vw,85px);
+    line-height:.9;
     letter-spacing:-4px;
+    margin-top:10px;
 }
 
-.hero h1 span{
+.intro h1 span{
     color:#d4af37;
 }
 
-.hero p{
-    max-width:550px;
-    margin-top:25px;
-    color:#d1d1d1;
-    font-size:18px;
+.intro p{
+    color:#888;
+    max-width:600px;
+    margin-top:18px;
     line-height:1.6;
 }
 
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:32px;
+/* MOSAIC */
+
+.mosaic{
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-auto-rows:90px;
+    gap:12px;
 }
 
-.btn{
-    padding:15px 28px;
-    border-radius:7px;
-    font-weight:bold;
-    display:inline-block;
-    transition:.25s;
+/* GENERAL CARD */
+
+.card{
+    position:relative;
+    overflow:hidden;
+
+    border:1px solid #302a16;
+    background:#0d0d0d;
+
+    transition:.3s;
 }
 
-.btn-primary{
-    background:linear-gradient(
-        90deg,
-        #9c7718,
-        #d4af37,
-        #f0d56a
-    );
-    color:#050505;
-}
-
-.btn-primary:hover{
-    transform:translateY(-2px);
-    box-shadow:0 8px 25px rgba(212,175,55,.25);
-}
-
-.btn-secondary{
-    border:1px solid #777;
-    color:#fff;
-}
-
-.btn-secondary:hover{
+.card:hover{
+    transform:translateY(-4px);
     border-color:#d4af37;
-    color:#d4af37;
+    box-shadow:0 15px 40px rgba(212,175,55,.08);
 }
 
-/* =========================
-   GENERAL
-========================= */
+.card-content{
+    position:absolute;
+    inset:0;
 
-.container{
-    width:90%;
-    max-width:1250px;
-    margin:auto;
-}
+    padding:25px;
 
-section{
-    padding:75px 0;
-}
-
-.section-head{
     display:flex;
-    justify-content:space-between;
-    align-items:end;
-    margin-bottom:30px;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    background:
+        linear-gradient(
+            transparent 15%,
+            rgba(0,0,0,.9) 100%
+        );
 }
 
-.small-title{
+.card-label{
     color:#d4af37;
-    font-size:13px;
+    font-size:10px;
     font-weight:bold;
     letter-spacing:2px;
     margin-bottom:8px;
 }
 
-h2{
-    font-size:42px;
-    letter-spacing:-1px;
+.card h2{
+    font-size:28px;
+    line-height:1;
 }
 
-.view-all{
-    color:#d4af37;
-    font-weight:bold;
+.card p{
+    color:#aaa;
+    font-size:12px;
+    margin-top:8px;
+    line-height:1.5;
 }
 
-/* =========================
-   HABERLER
-========================= */
+/* TSS HERO */
 
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
+.hero-card{
+    grid-column:span 8;
+    grid-row:span 5;
 
-.news-card{
-    min-height:250px;
-    border:1px solid #292929;
-    border-radius:12px;
-    overflow:hidden;
-    background:
-        linear-gradient(
-            145deg,
-            #181818,
-            #0b0b0b
-        );
-    position:relative;
-    transition:.3s;
-}
-
-.news-card:hover{
-    transform:translateY(-6px);
-    border-color:#d4af37;
-}
-
-.news-image{
-    height:135px;
     background:
         radial-gradient(
-            circle at 50% 30%,
-            #b18a24,
-            transparent 30%
+            circle at 70% 35%,
+            rgba(212,175,55,.35),
+            transparent 28%
         ),
         linear-gradient(
             135deg,
-            #30270e,
+            #181407,
+            #080808 65%
+        );
+}
+
+.hero-card:after{
+    content:"TSS";
+    position:absolute;
+    right:-30px;
+    bottom:-80px;
+
+    font-size:250px;
+    font-weight:900;
+    color:rgba(212,175,55,.035);
+}
+
+/* NEWS 1 */
+
+.news-one{
+    grid-column:span 4;
+    grid-row:span 3;
+
+    background:
+        linear-gradient(
+            145deg,
+            #31260d,
+            #090909
+        );
+}
+
+/* NEWS 2 */
+
+.news-two{
+    grid-column:span 4;
+    grid-row:span 2;
+
+    background:
+        linear-gradient(
+            145deg,
+            #252019,
+            #090909
+        );
+}
+
+/* VOTE */
+
+.vote-card{
+    grid-column:span 4;
+    grid-row:span 3;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(212,175,55,.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #1b1609,
             #080808
         );
 }
 
-.news-content{
-    padding:17px;
+.vote-card .big-icon{
+    font-size:48px;
+    margin-bottom:auto;
 }
 
-.tag{
+.vote-link{
+    display:inline-block;
+    margin-top:16px;
+
+    padding:12px 20px;
+
+    background:#d4af37;
+    color:#050505;
+
+    font-size:12px;
+    font-weight:bold;
+
+    border-radius:3px;
+}
+
+/* NEWS 3 */
+
+.news-three{
+    grid-column:span 4;
+    grid-row:span 2;
+
+    background:
+        linear-gradient(
+            145deg,
+            #211b0d,
+            #090909
+        );
+}
+
+/* ARTISTS */
+
+.artists-card{
+    grid-column:span 8;
+    grid-row:span 3;
+
+    background:#0b0b0b;
+}
+
+.artist-mini-grid{
+    position:absolute;
+    inset:0;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.artist-mini{
+    position:relative;
+    border-right:1px solid #282313;
+    overflow:hidden;
+}
+
+.artist-mini:last-child{
+    border-right:none;
+}
+
+.artist-mini:nth-child(1){
+    background:linear-gradient(145deg,#514316,#080808);
+}
+
+.artist-mini:nth-child(2){
+    background:linear-gradient(145deg,#3f3515,#080808);
+}
+
+.artist-mini:nth-child(3){
+    background:linear-gradient(145deg,#66551c,#080808);
+}
+
+.artist-mini span{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+
+    font-size:16px;
+    font-weight:900;
+}
+
+.artists-overlay{
+    position:absolute;
+    inset:0;
+
+    padding:22px;
+
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.25),
+            transparent 45%,
+            rgba(0,0,0,.5)
+        );
+}
+
+.artists-overlay h2{
+    font-size:28px;
+}
+
+.artists-overlay a{
     color:#d4af37;
     font-size:11px;
     font-weight:bold;
 }
 
-.news-content h3{
-    margin-top:8px;
-    font-size:17px;
-    line-height:1.3;
-}
+/* AWARDS */
 
-.date{
-    color:#777;
-    font-size:12px;
-    margin-top:12px;
-}
+.awards-card{
+    grid-column:span 4;
+    grid-row:span 3;
 
-/* =========================
-   SANATÇILAR
-========================= */
-
-.artist-grid{
-    display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:16px;
-}
-
-.artist{
-    height:300px;
-    border:1px solid #292929;
-    border-radius:12px;
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:end;
-    background:
-        linear-gradient(
-            150deg,
-            #493b13,
-            #090909
-        );
-    transition:.3s;
-}
-
-.artist:nth-child(2){
-    background:
-        linear-gradient(
-            150deg,
-            #51431c,
-            #090909
-        );
-}
-
-.artist:nth-child(3){
-    background:
-        linear-gradient(
-            150deg,
-            #66521d,
-            #090909
-        );
-}
-
-.artist:nth-child(4){
-    background:
-        linear-gradient(
-            150deg,
-            #3e3517,
-            #090909
-        );
-}
-
-.artist:nth-child(5){
-    background:
-        linear-gradient(
-            150deg,
-            #554718,
-            #090909
-        );
-}
-
-.artist:hover{
-    transform:translateY(-7px);
-    border-color:#d4af37;
-}
-
-.artist-info{
-    width:100%;
-    padding:20px;
-    background:
-        linear-gradient(
-            transparent,
-            rgba(0,0,0,.96)
-        );
-}
-
-.artist-info h3{
-    font-size:24px;
-}
-
-.artist-info p{
-    color:#aaa;
-    margin-top:5px;
-    font-size:13px;
-}
-
-.artist-btn{
-    display:inline-block;
-    margin-top:13px;
-    padding:8px 17px;
-    border:1px solid #d4af37;
-    border-radius:20px;
-    color:#e6c35a;
-    font-size:12px;
-    transition:.25s;
-}
-
-.artist-btn:hover{
-    background:#d4af37;
-    color:#000;
-}
-
-/* =========================
-   OYLAMA
-========================= */
-
-.vote-section{
     background:
         radial-gradient(
-            circle at 20% 50%,
-            rgba(212,175,55,.20),
-            transparent 35%
+            circle at 50% 35%,
+            rgba(212,175,55,.22),
+            transparent 38%
         ),
+        #0d0d0d;
+}
+
+.trophy{
+    font-size:52px;
+    margin-bottom:auto;
+}
+
+/* BIG NEWS */
+
+.big-news{
+    grid-column:span 8;
+    grid-row:span 3;
+
+    background:
         linear-gradient(
-            120deg,
-            #161208,
+            135deg,
+            #35290c,
+            #090909
+        );
+}
+
+/* SMALL NEWS */
+
+.small-news{
+    grid-column:span 4;
+    grid-row:span 3;
+
+    background:
+        linear-gradient(
+            135deg,
+            #211b0d,
             #080808
         );
 }
 
-.vote-box{
-    border:1px solid #59491f;
-    border-radius:18px;
-    padding:55px;
+/* BOTTOM CTA */
+
+.bottom-card{
+    grid-column:span 12;
+    grid-row:span 2;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
+    padding:35px;
+
     background:
         linear-gradient(
-            135deg,
-            rgba(212,175,55,.05),
-            transparent
+            100deg,
+            #171207,
+            #0b0b0b
         );
 }
 
-.vote-box h2{
-    max-width:500px;
+.bottom-card h2{
+    font-size:35px;
 }
 
-.vote-box p{
-    color:#aaa;
-    margin-top:15px;
-    line-height:1.6;
+.bottom-card span{
+    color:#d4af37;
 }
 
-.vote-button{
-    background:
-        linear-gradient(
-            90deg,
-            #9c7718,
-            #d4af37,
-            #f0d56a
-        );
+.bottom-button{
+    background:#d4af37;
     color:#050505;
-    padding:18px 35px;
-    border-radius:8px;
+
+    padding:15px 25px;
+
     font-weight:bold;
-    white-space:nowrap;
-    transition:.25s;
+    font-size:13px;
 }
 
-.vote-button:hover{
-    transform:translateY(-3px);
-    box-shadow:0 8px 30px rgba(212,175,55,.25);
-}
-
-/* =========================
-   ÖDÜLLER
-========================= */
-
-.award-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.award{
-    padding:30px;
-    min-height:190px;
-    border:1px solid #40351a;
-    border-radius:12px;
-    background:
-        linear-gradient(
-            145deg,
-            #17140d,
-            #090909
-        );
-    transition:.3s;
-}
-
-.award:hover{
-    transform:translateY(-5px);
-    border-color:#d4af37;
-    box-shadow:
-        0 10px 35px rgba(212,175,55,.08);
-}
-
-.award-icon{
-    font-size:32px;
-}
-
-.award h3{
-    margin-top:20px;
-}
-
-.award p{
-    color:#888;
-    margin-top:8px;
-    font-size:14px;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-    border-top:1px solid #292929;
-    padding:55px 0 25px;
-    background:#050505;
+    border-top:1px solid #29230f;
+    padding:45px 5%;
+    background:#030303;
 }
 
-.footer-grid{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
+.footer-inner{
+    max-width:1350px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .footer-logo{
-    font-size:35px;
-    font-weight:900;
     color:#d4af37;
+    font-size:30px;
+    font-weight:900;
 }
 
-footer p{
-    color:#777;
-    margin-top:15px;
+.footer-text{
+    color:#666;
+    font-size:12px;
     line-height:1.6;
 }
 
-footer h4{
-    margin-bottom:18px;
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a{
+    color:#777;
+    font-size:11px;
+}
+
+.footer-links a:hover{
     color:#d4af37;
 }
 
-footer a{
-    display:block;
-    color:#888;
-    margin:10px 0;
-    transition:.2s;
-}
-
-footer a:hover{
-    color:#d4af37;
-}
-
-.copyright{
-    border-top:1px solid #222;
-    margin-top:40px;
-    padding-top:20px;
-    text-align:center;
-    color:#555;
-    font-size:12px;
-}
-
-/* =========================
-   MOBİL
-========================= */
+/* TABLET */
 
 @media(max-width:900px){
 
     header{
         height:auto;
-        padding:18px 5%;
+        padding:17px 5%;
         flex-wrap:wrap;
         gap:15px;
     }
 
     nav{
+        order:3;
         width:100%;
         overflow-x:auto;
-        gap:18px;
-        padding-bottom:5px;
+        padding-bottom:4px;
     }
 
     nav a{
@@ -621,101 +542,133 @@ footer a:hover{
         display:none;
     }
 
-    .hero{
-        min-height:570px;
+    .mosaic{
+        grid-template-columns:repeat(6,1fr);
+        grid-auto-rows:90px;
     }
 
-    .hero h1{
-        letter-spacing:-2px;
+    .hero-card{
+        grid-column:span 6;
     }
 
-    .news-grid{
-        grid-template-columns:repeat(2,1fr);
+    .news-one{
+        grid-column:span 3;
     }
 
-    .artist-grid{
-        grid-template-columns:repeat(2,1fr);
+    .news-two{
+        grid-column:span 3;
     }
 
-    .award-grid{
-        grid-template-columns:repeat(2,1fr);
+    .vote-card{
+        grid-column:span 3;
     }
 
-    .vote-box{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:30px;
-        padding:35px;
+    .news-three{
+        grid-column:span 3;
     }
 
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
+    .artists-card{
+        grid-column:span 6;
     }
+
+    .awards-card{
+        grid-column:span 3;
+    }
+
+    .big-news{
+        grid-column:span 3;
+    }
+
+    .small-news{
+        grid-column:span 3;
+    }
+
+    .bottom-card{
+        grid-column:span 6;
+    }
+
 }
 
-@media(max-width:550px){
+/* MOBILE */
 
-    .logo-main{
+@media(max-width:600px){
+
+    main{
+        width:94%;
+        margin-top:25px;
+    }
+
+    .intro h1{
+        font-size:48px;
+        letter-spacing:-3px;
+    }
+
+    .mosaic{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .card{
+        min-height:240px;
+    }
+
+    .hero-card{
+        min-height:430px;
+    }
+
+    .news-one,
+    .news-two,
+    .vote-card,
+    .news-three,
+    .artists-card,
+    .awards-card,
+    .big-news,
+    .small-news{
+        min-height:250px;
+    }
+
+    .artists-card{
+        min-height:330px;
+    }
+
+    .bottom-card{
+        min-height:230px;
+
+        flex-direction:column;
+        align-items:flex-start;
+        justify-content:center;
+        gap:25px;
+    }
+
+    .bottom-card h2{
         font-size:30px;
     }
 
-    .logo-text{
-        font-size:10px;
+    .artist-mini-grid{
+        height:100%;
     }
 
-    section{
-        padding:55px 0;
-    }
-
-    h2{
-        font-size:32px;
-    }
-
-    .hero h1{
-        font-size:48px;
-    }
-
-    .hero p{
-        font-size:15px;
-    }
-
-    .hero-buttons{
+    .footer-inner{
         flex-direction:column;
         align-items:flex-start;
+        gap:25px;
     }
 
-    .news-grid,
-    .artist-grid,
-    .award-grid{
-        grid-template-columns:1fr;
-    }
-
-    .artist{
-        height:260px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
+    .footer-links{
+        flex-wrap:wrap;
     }
 
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
-
 <header>
 
     <div class="logo">
 
-        <div class="logo-main">
-            TSS
-        </div>
+        <div class="logo-main">TSS</div>
 
         <div class="logo-line"></div>
 
@@ -729,29 +682,17 @@ footer a:hover{
 
     <nav>
 
-        <a href="index.html">
-            ANA SAYFA
-        </a>
+        <a href="index.html">ANA SAYFA</a>
 
-        <a href="#haberler">
-            HABERLER
-        </a>
+        <a href="#haberler">HABERLER</a>
 
-        <a href="#sanatcilar">
-            SANATÇILAR
-        </a>
+        <a href="#sanatcilar">SANATÇILAR</a>
 
-        <a href="oylamalar.html">
-            OYLAMALAR
-        </a>
+        <a href="oylamalar.html">OYLAMALAR</a>
 
-        <a href="#oduller">
-            ÖDÜLLER
-        </a>
+        <a href="#oduller">ÖDÜLLER</a>
 
-        <a href="#hakkimizda">
-            HAKKIMIZDA
-        </a>
+        <a href="#hakkimizda">HAKKIMIZDA</a>
 
     </nav>
 
@@ -762,17 +703,15 @@ footer a:hover{
 </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<main>
 
-<section class="hero">
+    <!-- INTRO -->
 
-    <div class="hero-content">
+    <div class="intro">
 
-        <div class="kicker">
-            TÜRKİYE'NİN MÜZİK SAHNESİ
-        </div>
+        <small>
+            TÜRKİYE'NİN MÜZİK PLATFORMU
+        </small>
 
         <h1>
             TÜRKİYE<br>
@@ -780,454 +719,281 @@ footer a:hover{
         </h1>
 
         <p>
-            Türkiye'nin müzik dünyasını bir araya getiriyoruz.
-            Haberler, sanatçılar, oylamalar ve 2026 ödülleri burada.
+            Müzik dünyasının nabzını tutuyoruz.
+            Haberler, sanatçılar ve 2026 TSS Awards
+            tek bir yerde.
         </p>
 
-        <div class="hero-buttons">
-
-            <a href="oylamalar.html" class="btn btn-primary">
-                🏆 OY VER
-            </a>
-
-            <a href="#oduller" class="btn btn-secondary">
-                ÖDÜLLERİ KEŞFET
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     HABERLER
-========================= -->
-
-<section id="haberler">
-
-<div class="container">
-
-    <div class="section-head">
-
-        <div>
-
-            <div class="small-title">
-                SON DAKİKA
-            </div>
-
-            <h2>
-                HABERLER
-            </h2>
-
-        </div>
-
-        <a href="#" class="view-all">
-            TÜM HABERLER →
-        </a>
-
     </div>
 
 
-    <div class="news-grid">
+    <!-- MOSAIC -->
+
+    <div class="mosaic" id="haberler">
 
 
-        <article class="news-card">
+        <!-- HERO -->
 
-            <div class="news-image"></div>
+        <article class="card hero-card">
 
-            <div class="news-content">
+            <div class="card-content">
 
-                <div class="tag">
-                    GÜNDEM
+                <div class="card-label">
+                    TSS 2026
                 </div>
 
-                <h3>
-                    Manifest yeni şarkısıyla gündemde!
-                </h3>
+                <h2>
+                    Müziğin<br>
+                    sahnesi burada.
+                </h2>
 
-                <div class="date">
-                    13 Ağu 2026
-                </div>
+                <p>
+                    Türkiye Stage Show ile 2026'nın
+                    en önemli müzik olaylarını keşfet.
+                </p>
 
             </div>
 
         </article>
 
 
-        <article class="news-card">
+        <!-- NEWS -->
 
-            <div class="news-image"></div>
+        <article class="card news-one">
 
-            <div class="news-content">
+            <div class="card-content">
 
-                <div class="tag">
+                <div class="card-label">
+                    SON DAKİKA
+                </div>
+
+                <h2>
+                    Manifest
+                    gündemde!
+                </h2>
+
+                <p>
+                    Müzik dünyasından son gelişmeler.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- VOTE -->
+
+        <article class="card vote-card">
+
+            <div class="card-content">
+
+                <div class="big-icon">
+                    🗳️
+                </div>
+
+                <div class="card-label">
+                    2026 TSS AWARDS
+                </div>
+
+                <h2>
+                    Favorini seç.
+                </h2>
+
+                <p>
+                    Yılın en iyilerini sen belirle.
+                </p>
+
+                <a href="oylamalar.html" class="vote-link">
+                    OYLAMALARA GİT →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- NEWS -->
+
+        <article class="card news-two">
+
+            <div class="card-content">
+
+                <div class="card-label">
                     YENİ ŞARKI
                 </div>
 
-                <h3>
-                    CRUSH! yeni projesini yayınladı
-                </h3>
+                <h2>
+                    CRUSH!
+                </h2>
 
-                <div class="date">
-                    12 Ağu 2026
-                </div>
-
-            </div>
-
-        </article>
-
-
-        <article class="news-card">
-
-            <div class="news-image"></div>
-
-            <div class="news-content">
-
-                <div class="tag">
-                    HABER
-                </div>
-
-                <h3>
-                    Yılın müzik etkinlikleri açıklandı
-                </h3>
-
-                <div class="date">
-                    11 Ağu 2026
-                </div>
+                <p>
+                    Yeni projeler ve müzik haberleri.
+                </p>
 
             </div>
 
         </article>
 
 
-        <article class="news-card">
+        <!-- NEWS -->
 
-            <div class="news-image"></div>
+        <article class="card news-three">
 
-            <div class="news-content">
+            <div class="card-content">
 
-                <div class="tag">
+                <div class="card-label">
+                    GÜNDEM
+                </div>
+
+                <h2>
+                    Müzik dünyasından
+                    yeni haberler.
+                </h2>
+
+            </div>
+
+        </article>
+
+
+        <!-- ARTISTS -->
+
+        <article class="card artists-card" id="sanatcilar">
+
+            <div class="artist-mini-grid">
+
+                <div class="artist-mini">
+                    <span>MANIFEST</span>
+                </div>
+
+                <div class="artist-mini">
+                    <span>AURA</span>
+                </div>
+
+                <div class="artist-mini">
+                    <span>MANTRA</span>
+                </div>
+
+            </div>
+
+            <div class="artists-overlay">
+
+                <h2>
+                    SANATÇILAR
+                </h2>
+
+                <a href="#">
+                    TÜMÜNÜ GÖR →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- AWARDS -->
+
+        <article class="card awards-card" id="oduller">
+
+            <div class="card-content">
+
+                <div class="trophy">
+                    🏆
+                </div>
+
+                <div class="card-label">
+                    TSS AWARDS 2026
+                </div>
+
+                <h2>
+                    Ödüller
+                </h2>
+
+                <p>
+                    Yılın Grubu, Yılın Şarkısı,
+                    Yaz Şarkısı ve Yılın Çıkışı.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- BIG NEWS -->
+
+        <article class="card big-news">
+
+            <div class="card-content">
+
+                <div class="card-label">
+                    ÖNE ÇIKAN
+                </div>
+
+                <h2>
+                    2026'nın müzik
+                    hikâyesi yazılıyor.
+                </h2>
+
+                <p>
+                    TSS ile yılın en önemli
+                    müzik olaylarını takip et.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- SMALL NEWS -->
+
+        <article class="card small-news">
+
+            <div class="card-content">
+
+                <div class="card-label">
                     RÖPORTAJ
                 </div>
 
-                <h3>
-                    Aura'dan özel açıklamalar
-                </h3>
-
-                <div class="date">
-                    10 Ağu 2026
-                </div>
+                <h2>
+                    Sanatçılardan
+                    özel açıklamalar.
+                </h2>
 
             </div>
 
         </article>
 
 
-    </div>
+        <!-- BOTTOM -->
 
-</div>
+        <article class="card bottom-card">
 
-</section>
+            <div>
 
+                <div class="card-label">
+                    TÜRKİYE STAGE SHOW
+                </div>
 
-<!-- =========================
-     SANATÇILAR
-========================= -->
-
-<section id="sanatcilar">
-
-<div class="container">
-
-    <div class="section-head">
-
-        <div>
-
-            <div class="small-title">
-                ÖNE ÇIKAN
-            </div>
-
-            <h2>
-                SANATÇILAR
-            </h2>
-
-        </div>
-
-        <a href="#" class="view-all">
-            TÜM SANATÇILAR →
-        </a>
-
-    </div>
-
-
-    <div class="artist-grid">
-
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>
-                    MANIFEST
-                </h3>
-
-                <p>
-                    6 ÜYE
-                </p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
+                <h2>
+                    Sen de <span>oyunu kullan.</span>
+                </h2>
 
             </div>
 
-        </div>
+            <a href="oylamalar.html" class="bottom-button">
+                🗳 OY VER
+            </a>
 
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>
-                    AURA
-                </h3>
-
-                <p>
-                    4 ÜYE
-                </p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>
-                    MANTRA
-                </h3>
-
-                <p>
-                    5 ÜYE
-                </p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>
-                    RADİKAL
-                </h3>
-
-                <p>
-                    5 ÜYE
-                </p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>
-                    CRUSH!
-                </h3>
-
-                <p>
-                    5 ÜYE
-                </p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
-
-            </div>
-
-        </div>
+        </article>
 
 
     </div>
 
-</div>
+</main>
 
-</section>
-
-
-<!-- =========================
-     OYLAMALAR
-========================= -->
-
-<section id="oylamalar" class="vote-section">
-
-<div class="container">
-
-    <div class="vote-box">
-
-        <div>
-
-            <div class="small-title">
-                OYUNU KULLAN
-            </div>
-
-            <h2>
-                FAVORİLERİNİ DESTEKLE!
-            </h2>
-
-            <p>
-                Yılın en iyilerini sen belirle.
-                Favori sanatçına veya grubuna oy ver!
-            </p>
-
-        </div>
-
-
-        <a href="oylamalar.html" class="vote-button">
-            📊 HEMEN OY VER
-        </a>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     ÖDÜLLER
-========================= -->
-
-<section id="oduller">
-
-<div class="container">
-
-    <div class="section-head">
-
-        <div>
-
-            <div class="small-title">
-                2026 TSS AWARDS
-            </div>
-
-            <h2>
-                ÖDÜLLER
-            </h2>
-
-        </div>
-
-    </div>
-
-
-    <div class="award-grid">
-
-
-        <div class="award">
-
-            <div class="award-icon">
-                🏆
-            </div>
-
-            <h3>
-                Yılın Grubu
-            </h3>
-
-            <p>
-                2026'nın en başarılı grubunu belirle.
-            </p>
-
-        </div>
-
-
-        <div class="award">
-
-            <div class="award-icon">
-                🎵
-            </div>
-
-            <h3>
-                Yılın Şarkısı
-            </h3>
-
-            <p>
-                Yılın en sevilen şarkısını seç.
-            </p>
-
-        </div>
-
-
-        <div class="award">
-
-            <div class="award-icon">
-                ☀️
-            </div>
-
-            <h3>
-                Yılın Yaz Şarkısı
-            </h3>
-
-            <p>
-                2026 yazının hitini belirle.
-            </p>
-
-        </div>
-
-
-        <div class="award">
-
-            <div class="award-icon">
-                ⭐
-            </div>
-
-            <h3>
-                Yılın Çıkışı
-            </h3>
-
-            <p>
-                Yılın en dikkat çeken çıkışını seç.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer id="hakkimizda">
 
-<div class="container">
-
-    <div class="footer-grid">
-
+    <div class="footer-inner">
 
         <div>
 
@@ -1235,101 +1001,35 @@ footer a:hover{
                 TSS
             </div>
 
-            <p>
-                Türkiye Stage Show; müzik, sanatçı,
-                haber, oylama ve ödülleri bir araya
-                getiren dijital platformdur.
-            </p>
+            <div class="footer-text">
+                Türkiye Stage Show<br>
+                © 2026 Tüm hakları saklıdır.
+            </div>
 
         </div>
 
 
-        <div>
-
-            <h4>
-                HIZLI ERİŞİM
-            </h4>
+        <div class="footer-links">
 
             <a href="index.html">
-                Ana Sayfa
-            </a>
-
-            <a href="#haberler">
-                Haberler
-            </a>
-
-            <a href="#sanatcilar">
-                Sanatçılar
+                ANA SAYFA
             </a>
 
             <a href="oylamalar.html">
-                Oylamalar
+                OYLAMALAR
+            </a>
+
+            <a href="#sanatcilar">
+                SANATÇILAR
+            </a>
+
+            <a href="#oduller">
+                ÖDÜLLER
             </a>
 
         </div>
-
-
-        <div>
-
-            <h4>
-                KATEGORİLER
-            </h4>
-
-            <a href="#oduller">
-                Yılın Grubu
-            </a>
-
-            <a href="#oduller">
-                Yılın Şarkısı
-            </a>
-
-            <a href="#oduller">
-                Yılın Yaz Şarkısı
-            </a>
-
-            <a href="#oduller">
-                Yılın Çıkışı
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                TSS
-            </h4>
-
-            <a href="#hakkimizda">
-                Hakkımızda
-            </a>
-
-            <a href="#">
-                İletişim
-            </a>
-
-            <a href="#">
-                Gizlilik Politikası
-            </a>
-
-            <a href="#">
-                Çerez Politikası
-            </a>
-
-        </div>
-
 
     </div>
-
-
-    <div class="copyright">
-
-        © 2026 Türkiye Stage Show (TSS)
-        • Tüm hakları saklıdır.
-
-    </div>
-
-</div>
 
 </footer>
 
