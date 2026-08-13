@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oylamalar | Türkiye Stage Show</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070707;
+    color:white;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* HEADER */
+
+header{
+    height:78px;
+    background:#050505;
+    border-bottom:1px solid #292929;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 5%;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-main{
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.logo-line{
+    width:1px;
+    height:38px;
+    background:#777;
+}
+
+.logo-text{
+    font-size:10px;
+    line-height:1.1;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    font-size:13px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#d044ff;
+}
+
+.back{
+    border:1px solid #a52ad0;
+    padding:11px 20px;
+    border-radius:25px;
+    color:#dc73ff;
+}
+
+/* HERO */
+
+.hero{
+    padding:90px 20px 70px;
+    text-align:center;
+    background:
+    radial-gradient(circle at 50% 20%,rgba(190,40,255,.28),transparent 35%),
+    linear-gradient(180deg,#120718,#070707);
+}
+
+.small-title{
+    color:#d14aff;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:clamp(45px,7vw,80px);
+    font-weight:900;
+    letter-spacing:-3px;
+}
+
+.hero h1 span{
+    color:#d34aff;
+}
+
+.hero p{
+    max-width:650px;
+    margin:20px auto 0;
+    color:#aaa;
+    line-height:1.6;
+}
+
+/* CONTAINER */
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* CATEGORY */
+
+.category{
+    padding:65px 0 20px;
+}
+
+.category-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.category-number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#a924df,#e34fff);
+    font-weight:bold;
+}
+
+.category-title h2{
+    font-size:30px;
+}
+
+/* CANDIDATES */
+
+.candidates{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.candidate{
+    position:relative;
+    min-height:210px;
+    border:1px solid #292929;
+    border-radius:14px;
+    padding:25px;
+    background:linear-gradient(145deg,#171717,#0c0c0c);
+    cursor:pointer;
+    transition:.25s;
+}
+
+.candidate:hover{
+    transform:translateY(-5px);
+    border-color:#b837dc;
+}
+
+.candidate.selected{
+    border:2px solid #d44cff;
+    background:linear-gradient(145deg,#24102b,#0d0d0d);
+    box-shadow:0 0 25px rgba(205,54,255,.18);
+}
+
+.radio{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:22px;
+    height:22px;
+    border:2px solid #777;
+    border-radius:50%;
+}
+
+.candidate.selected .radio{
+    border-color:#d24cff;
+    background:#d24cff;
+    box-shadow:inset 0 0 0 5px #171017;
+}
+
+.artist-placeholder{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#9e24ca,#391444);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.candidate h3{
+    font-size:22px;
+}
+
+.candidate p{
+    color:#888;
+    margin-top:7px;
+    font-size:13px;
+}
+
+/* VOTE AREA */
+
+.vote-area{
+    margin:70px 0 100px;
+    padding:45px;
+    border-radius:16px;
+    border:1px solid #45204f;
+    background:
+    radial-gradient(circle at 20% 50%,rgba(188,39,242,.22),transparent 40%),
+    #100b12;
+    text-align:center;
+}
+
+.vote-area h2{
+    font-size:32px;
+}
+
+.vote-area p{
+    color:#999;
+    margin:12px auto 25px;
+    max-width:550px;
+}
+
+.vote-button{
+    border:none;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    padding:16px 40px;
+    border-radius:8px;
+    background:linear-gradient(90deg,#a924df,#e348ff);
+}
+
+.vote-button:hover{
+    transform:scale(1.03);
+}
+
+.message{
+    margin-top:18px;
+    color:#d75aff;
+    min-height:20px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #292929;
+    background:#050505;
+    padding:35px 20px;
+    text-align:center;
+}
+
+footer strong{
+    font-size:24px;
+}
+
+footer p{
+    color:#666;
+    margin-top:10px;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    header{
+        height:auto;
+        padding:18px 5%;
+        flex-wrap:wrap;
+        gap:15px;
+    }
+
+    nav{
+        order:3;
+        width:100%;
+        overflow-x:auto;
+        padding-bottom:5px;
+    }
+
+    nav a{
+        white-space:nowrap;
+    }
+
+    .back{
+        display:none;
+    }
+
+    .candidates{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:520px){
+
+    .hero{
+        padding:65px 15px 50px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .candidates{
+        grid-template-columns:1fr;
+    }
+
+    .category-title h2{
+        font-size:24px;
+    }
+
+    .vote-area{
+        padding:30px 20px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-main">TSS</div>
+
+        <div class="logo-line"></div>
+
+        <div class="logo-text">
+            TÜRKİYE<br>
+            STAGE<br>
+            SHOW
+        </div>
+
+    </div>
+
+    <nav>
+        <a href="index.html">ANA SAYFA</a>
+        <a href="index.html#haberler">HABERLER</a>
+        <a href="index.html#sanatcilar">SANATÇILAR</a>
+        <a href="oylamalar.html">OYLAMALAR</a>
+        <a href="index.html#oduller">ÖDÜLLER</a>
+    </nav>
+
+    <a href="index.html" class="back">← ANA SAYFA</a>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="small-title">
+        TÜRKİYE STAGE SHOW
+    </div>
+
+    <h1>
+        2026 <span>OYLAMALARI</span>
+    </h1>
+
+    <p>
+        Favorilerini seç, müzik dünyasının 2026'daki
+        en iyilerini birlikte belirleyelim.
+    </p>
+
+</section>
+
+
+<div class="container">
+
+
+<!-- KATEGORİ 1 -->
+
+<section class="category">
+
+    <div class="category-title">
+
+        <div class="category-number">01</div>
+
+        <h2>🏆 Yılın Grubu</h2>
+
+    </div>
+
+
+    <div class="candidates">
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">M</div>
+
+            <h3>MANIFEST</h3>
+            <p>Yılın Grubu 2026</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">A</div>
+
+            <h3>AURA</h3>
+            <p>Yılın Grubu 2026</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">M</div>
+
+            <h3>MANTRA</h3>
+            <p>Yılın Grubu 2026</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KATEGORİ 2 -->
+
+<section class="category">
+
+    <div class="category-title">
+
+        <div class="category-number">02</div>
+
+        <h2>🎵 Yılın Şarkısı</h2>
+
+    </div>
+
+
+    <div class="candidates">
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">M</div>
+
+            <h3>Toz Pembe</h3>
+            <p>MANIFEST</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">A</div>
+
+            <h3>Yuh</h3>
+            <p>AURA</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">M</div>
+
+            <h3>Bi Kiss</h3>
+            <p>MANTRA</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KATEGORİ 3 -->
+
+<section class="category">
+
+    <div class="category-title">
+
+        <div class="category-number">03</div>
+
+        <h2>☀️ Yılın Yaz Şarkısı</h2>
+
+    </div>
+
+
+    <div class="candidates">
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">M</div>
+
+            <h3>Toz Pembe</h3>
+            <p>MANIFEST</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">A</div>
+
+            <h3>Yuh</h3>
+            <p>AURA</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">K</div>
+
+            <h3>İhtimal</h3>
+            <p>KARMA</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- KATEGORİ 4 -->
+
+<section class="category">
+
+    <div class="category-title">
+
+        <div class="category-number">04</div>
+
+        <h2>⭐ Yılın Çıkışı</h2>
+
+    </div>
+
+
+    <div class="candidates">
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">R</div>
+
+            <h3>RADİKAL</h3>
+            <p>Yılın Çıkışı 2026</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">C</div>
+
+            <h3>CRUSH!</h3>
+            <p>Yılın Çıkışı 2026</p>
+        </div>
+
+
+        <div class="candidate" onclick="selectCandidate(this)">
+            <div class="radio"></div>
+
+            <div class="artist-placeholder">M</div>
+
+            <h3>MANTRA</h3>
+            <p>Yılın Çıkışı 2026</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- OY VER -->
+
+<div class="vote-area">
+
+    <h2>SEÇİMLERİNİ TAMAMLADIN MI?</h2>
+
+    <p>
+        Her kategoride bir aday seçtikten sonra
+        oyunu gönderebilirsin.
+    </p>
+
+    <button class="vote-button" onclick="submitVotes()">
+        🗳 OYLARI GÖNDER
+    </button>
+
+    <div class="message" id="message"></div>
+
+</div>
+
+</div>
+
+
+<footer>
+
+    <strong>TSS</strong>
+
+    <p>
+        © 2026 Türkiye Stage Show • Tüm hakları saklıdır.
+    </p>
+
+</footer>
+
+
+<script>
+
+function selectCandidate(element){
+
+    const category = element.closest(".candidates");
+
+    category.querySelectorAll(".candidate")
+    .forEach(candidate => {
+        candidate.classList.remove("selected");
+    });
+
+    element.classList.add("selected");
+}
+
+
+function submitVotes(){
+
+    const categories =
+        document.querySelectorAll(".category");
+
+    let completed = true;
+
+    categories.forEach(category => {
+
+        const selected =
+            category.querySelector(".selected");
+
+        if(!selected){
+            completed = false;
+        }
+
+    });
+
+
+    const message =
+        document.getElementById("message");
+
+
+    if(!completed){
+
+        message.innerText =
+        "⚠️ Lütfen her kategoriden bir aday seç.";
+
+        return;
+    }
+
+
+    message.innerText =
+    "✅ Seçimlerin alındı! Gerçek oy kaydı sistemi yakında aktif olacak.";
+
+}
+
+</script>
+
+</body>
+</html>
