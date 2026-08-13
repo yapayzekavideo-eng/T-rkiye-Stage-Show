@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Türkiye Stage Show</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    color: #111;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.hero {
+    min-height: 500px;
+    background: linear-gradient(135deg, #111, #333);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.vote {
+    background: #111;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px 20px;
+}
+
+.vote h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width:700px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">TÜRKİYE STAGE SHOW</div>
+
+    <nav>
+        <a href="#haberler">Haberler</a>
+        <a href="#sanatcilar">Sanatçılar</a>
+        <a href="#oylamalar">Oylamalar</a>
+        <a href="#oduller">Ödüller</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h1>Türkiye Stage Show</h1>
+        <p>Türkiye'nin müzik ve sahne dünyasını keşfet.</p>
+        <a href="#oylamalar" class="button">OY VER</a>
+    </div>
+</section>
+
+<section id="haberler">
+    <h2 class="section-title">📰 Haberler</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Müzik Dünyasından Son Haberler</h3>
+            <p>Türkiye müzik dünyasındaki gelişmeleri takip et.</p>
+        </div>
+
+        <div class="card">
+            <h3>Yeni Şarkılar</h3>
+            <p>Yeni çıkan şarkıları ve müzik projelerini keşfet.</p>
+        </div>
+
+        <div class="card">
+            <h3>Gündem</h3>
+            <p>Sanatçıların ve grupların son gelişmeleri burada.</p>
+        </div>
+    </div>
+</section>
+
+<section id="sanatcilar">
+    <h2 class="section-title">🎤 Sanatçılar</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Manifest</h3>
+            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+        </div>
+
+        <div class="card">
+            <h3>Aura</h3>
+            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+        </div>
+
+        <div class="card">
+            <h3>Mantra</h3>
+            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+        </div>
+
+        <div class="card">
+            <h3>Radikal</h3>
+            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+        </div>
+    </div>
+</section>
+
+<section id="oylamalar">
+    <div class="vote">
+        <h2>🗳️ OYLAMALAR</h2>
+        <p>Favori sanatçını veya grubunu seç ve oyunu kullan!</p>
+        <br>
+        <a href="#" class="button">OY VER</a>
+    </div>
+</section>
+
+<section id="oduller">
+    <h2 class="section-title">🏆 2026 Ödülleri</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Yılın Grubu</h3>
+            <p>2026'nın en başarılı grubunu seç.</p>
+        </div>
+
+        <div class="card">
+            <h3>Yılın Şarkısı</h3>
+            <p>Yılın en iyi şarkısı için oyunu kullan.</p>
+        </div>
+
+        <div class="card">
+            <h3>Yılın Yaz Şarkısı</h3>
+            <p>2026'nın yaz hitini belirle.</p>
+        </div>
+
+        <div class="card">
+            <h3>Yılın Çıkışı</h3>
+            <p>Yılın en dikkat çeken çıkışını seç.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Türkiye Stage Show</p>
+    <br>
+    <p>Müzik • Haber • Oylama • Ödüller</p>
+</footer>
+
+</body>
+</html>
