@@ -20,7 +20,7 @@ html{
 
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#070707;
+    background:#050505;
     color:#fff;
 }
 
@@ -29,12 +29,14 @@ a{
     color:inherit;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
     height:78px;
-    background:rgba(5,5,5,.97);
-    border-bottom:1px solid #292929;
+    background:rgba(5,5,5,.98);
+    border-bottom:1px solid #3a321d;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -54,12 +56,13 @@ header{
     font-size:38px;
     font-weight:900;
     letter-spacing:-2px;
+    color:#d4af37;
 }
 
 .logo-line{
     width:1px;
     height:40px;
-    background:#777;
+    background:#6f5b25;
 }
 
 .logo-text{
@@ -67,6 +70,7 @@ header{
     line-height:1.1;
     letter-spacing:2px;
     font-weight:bold;
+    color:#d8d8d8;
 }
 
 nav{
@@ -82,17 +86,25 @@ nav a{
 }
 
 nav a:hover{
-    color:#c83cff;
+    color:#d4af37;
 }
 
 .vote-top{
-    border:1px solid #b92cff;
+    border:1px solid #d4af37;
     padding:12px 22px;
     border-radius:25px;
-    color:#e67aff;
+    color:#e5c65a;
+    transition:.25s;
 }
 
-/* HERO */
+.vote-top:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
     min-height:610px;
@@ -102,16 +114,35 @@ nav a:hover{
     overflow:hidden;
 
     background:
-    radial-gradient(circle at 75% 40%,rgba(171,30,255,.35),transparent 30%),
-    radial-gradient(circle at 90% 70%,rgba(255,170,0,.18),transparent 25%),
-    linear-gradient(120deg,#050505,#130719,#050505);
+    radial-gradient(
+        circle at 75% 40%,
+        rgba(212,175,55,.30),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 90% 70%,
+        rgba(255,215,100,.14),
+        transparent 25%
+    ),
+    linear-gradient(
+        120deg,
+        #050505,
+        #17140b,
+        #050505
+    );
 }
 
 .hero:after{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(90deg,#050505 5%,transparent 65%,#050505);
+    background:
+        linear-gradient(
+            90deg,
+            #050505 5%,
+            transparent 65%,
+            #050505
+        );
     pointer-events:none;
 }
 
@@ -124,7 +155,7 @@ nav a:hover{
 }
 
 .kicker{
-    color:#d04aff;
+    color:#d4af37;
     font-size:15px;
     font-weight:bold;
     letter-spacing:3px;
@@ -140,7 +171,7 @@ nav a:hover{
 }
 
 .hero h1 span{
-    color:#d34aff;
+    color:#d4af37;
 }
 
 .hero p{
@@ -162,17 +193,37 @@ nav a:hover{
     border-radius:7px;
     font-weight:bold;
     display:inline-block;
+    transition:.25s;
 }
 
 .btn-primary{
-    background:linear-gradient(90deg,#b927ff,#e44dff);
+    background:linear-gradient(
+        90deg,
+        #9c7718,
+        #d4af37,
+        #f0d56a
+    );
+    color:#050505;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 25px rgba(212,175,55,.25);
 }
 
 .btn-secondary{
     border:1px solid #777;
+    color:#fff;
 }
 
-/* GENERAL */
+.btn-secondary:hover{
+    border-color:#d4af37;
+    color:#d4af37;
+}
+
+/* =========================
+   GENERAL
+========================= */
 
 .container{
     width:90%;
@@ -192,7 +243,7 @@ section{
 }
 
 .small-title{
-    color:#d04aff;
+    color:#d4af37;
     font-size:13px;
     font-weight:bold;
     letter-spacing:2px;
@@ -205,11 +256,13 @@ h2{
 }
 
 .view-all{
-    color:#c83cff;
+    color:#d4af37;
     font-weight:bold;
 }
 
-/* NEWS */
+/* =========================
+   HABERLER
+========================= */
 
 .news-grid{
     display:grid;
@@ -222,21 +275,34 @@ h2{
     border:1px solid #292929;
     border-radius:12px;
     overflow:hidden;
-    background:linear-gradient(145deg,#171717,#0d0d0d);
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #0b0b0b
+        );
     position:relative;
     transition:.3s;
 }
 
 .news-card:hover{
     transform:translateY(-6px);
-    border-color:#a832d8;
+    border-color:#d4af37;
 }
 
 .news-image{
     height:135px;
     background:
-    radial-gradient(circle at 50% 30%,#b735e7,transparent 30%),
-    linear-gradient(135deg,#24102c,#080808);
+        radial-gradient(
+            circle at 50% 30%,
+            #b18a24,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #30270e,
+            #080808
+        );
 }
 
 .news-content{
@@ -244,7 +310,7 @@ h2{
 }
 
 .tag{
-    color:#d75aff;
+    color:#d4af37;
     font-size:11px;
     font-weight:bold;
 }
@@ -261,7 +327,9 @@ h2{
     margin-top:12px;
 }
 
-/* ARTISTS */
+/* =========================
+   SANATÇILAR
+========================= */
 
 .artist-grid{
     display:grid;
@@ -277,35 +345,64 @@ h2{
     overflow:hidden;
     display:flex;
     align-items:end;
-    background:linear-gradient(150deg,#391449,#0b0b0b);
+    background:
+        linear-gradient(
+            150deg,
+            #493b13,
+            #090909
+        );
     transition:.3s;
+}
+
+.artist:nth-child(2){
+    background:
+        linear-gradient(
+            150deg,
+            #51431c,
+            #090909
+        );
+}
+
+.artist:nth-child(3){
+    background:
+        linear-gradient(
+            150deg,
+            #66521d,
+            #090909
+        );
+}
+
+.artist:nth-child(4){
+    background:
+        linear-gradient(
+            150deg,
+            #3e3517,
+            #090909
+        );
+}
+
+.artist:nth-child(5){
+    background:
+        linear-gradient(
+            150deg,
+            #554718,
+            #090909
+        );
 }
 
 .artist:hover{
     transform:translateY(-7px);
-    border-color:#c13cff;
-}
-
-.artist:nth-child(2){
-    background:linear-gradient(150deg,#192d55,#090909);
-}
-
-.artist:nth-child(3){
-    background:linear-gradient(150deg,#594019,#090909);
-}
-
-.artist:nth-child(4){
-    background:linear-gradient(150deg,#381928,#090909);
-}
-
-.artist:nth-child(5){
-    background:linear-gradient(150deg,#124443,#090909);
+    border-color:#d4af37;
 }
 
 .artist-info{
     width:100%;
     padding:20px;
-    background:linear-gradient(transparent,rgba(0,0,0,.95));
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.96)
+        );
 }
 
 .artist-info h3{
@@ -322,27 +419,49 @@ h2{
     display:inline-block;
     margin-top:13px;
     padding:8px 17px;
-    border:1px solid #c43cff;
+    border:1px solid #d4af37;
     border-radius:20px;
-    color:#db72ff;
+    color:#e6c35a;
     font-size:12px;
+    transition:.25s;
 }
 
-/* VOTE */
+.artist-btn:hover{
+    background:#d4af37;
+    color:#000;
+}
+
+/* =========================
+   OYLAMA
+========================= */
 
 .vote-section{
     background:
-    radial-gradient(circle at 20% 50%,rgba(169,35,230,.28),transparent 35%),
-    linear-gradient(120deg,#13091a,#080808);
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(212,175,55,.20),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #161208,
+            #080808
+        );
 }
 
 .vote-box{
-    border:1px solid #482052;
+    border:1px solid #59491f;
     border-radius:18px;
     padding:55px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212,175,55,.05),
+            transparent
+        );
 }
 
 .vote-box h2{
@@ -356,14 +475,29 @@ h2{
 }
 
 .vote-button{
-    background:linear-gradient(90deg,#ad26f2,#e44bff);
+    background:
+        linear-gradient(
+            90deg,
+            #9c7718,
+            #d4af37,
+            #f0d56a
+        );
+    color:#050505;
     padding:18px 35px;
     border-radius:8px;
     font-weight:bold;
     white-space:nowrap;
+    transition:.25s;
 }
 
-/* AWARDS */
+.vote-button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 30px rgba(212,175,55,.25);
+}
+
+/* =========================
+   ÖDÜLLER
+========================= */
 
 .award-grid{
     display:grid;
@@ -374,15 +508,22 @@ h2{
 .award{
     padding:30px;
     min-height:190px;
-    border:1px solid #302919;
+    border:1px solid #40351a;
     border-radius:12px;
-    background:linear-gradient(145deg,#17140d,#090909);
+    background:
+        linear-gradient(
+            145deg,
+            #17140d,
+            #090909
+        );
     transition:.3s;
 }
 
 .award:hover{
     transform:translateY(-5px);
-    border-color:#c99b31;
+    border-color:#d4af37;
+    box-shadow:
+        0 10px 35px rgba(212,175,55,.08);
 }
 
 .award-icon{
@@ -399,7 +540,9 @@ h2{
     font-size:14px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     border-top:1px solid #292929;
@@ -416,6 +559,7 @@ footer{
 .footer-logo{
     font-size:35px;
     font-weight:900;
+    color:#d4af37;
 }
 
 footer p{
@@ -426,12 +570,18 @@ footer p{
 
 footer h4{
     margin-bottom:18px;
+    color:#d4af37;
 }
 
 footer a{
     display:block;
     color:#888;
     margin:10px 0;
+    transition:.2s;
+}
+
+footer a:hover{
+    color:#d4af37;
 }
 
 .copyright{
@@ -443,7 +593,9 @@ footer a{
     font-size:12px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBİL
+========================= */
 
 @media(max-width:900px){
 
@@ -545,6 +697,7 @@ footer a{
     .footer-grid{
         grid-template-columns:1fr;
     }
+
 }
 
 </style>
@@ -552,13 +705,17 @@ footer a{
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="logo">
 
-        <div class="logo-main">TSS</div>
+        <div class="logo-main">
+            TSS
+        </div>
 
         <div class="logo-line"></div>
 
@@ -571,20 +728,43 @@ footer a{
     </div>
 
     <nav>
-        <a href="index.html">ANA SAYFA</a>
-        <a href="#haberler">HABERLER</a>
-        <a href="#sanatcilar">SANATÇILAR</a>
-        <a href="oylamalar.html">OYLAMALAR</a>
-        <a href="#oduller">ÖDÜLLER</a>
-        <a href="#hakkimizda">HAKKIMIZDA</a>
+
+        <a href="index.html">
+            ANA SAYFA
+        </a>
+
+        <a href="#haberler">
+            HABERLER
+        </a>
+
+        <a href="#sanatcilar">
+            SANATÇILAR
+        </a>
+
+        <a href="oylamalar.html">
+            OYLAMALAR
+        </a>
+
+        <a href="#oduller">
+            ÖDÜLLER
+        </a>
+
+        <a href="#hakkimizda">
+            HAKKIMIZDA
+        </a>
+
     </nav>
 
-    <a href="oylamalar.html" class="vote-top">🗳 OY VER</a>
+    <a href="oylamalar.html" class="vote-top">
+        🗳 OY VER
+    </a>
 
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -621,7 +801,9 @@ footer a{
 </section>
 
 
-<!-- HABERLER -->
+<!-- =========================
+     HABERLER
+========================= -->
 
 <section id="haberler">
 
@@ -630,8 +812,15 @@ footer a{
     <div class="section-head">
 
         <div>
-            <div class="small-title">SON DAKİKA</div>
-            <h2>HABERLER</h2>
+
+            <div class="small-title">
+                SON DAKİKA
+            </div>
+
+            <h2>
+                HABERLER
+            </h2>
+
         </div>
 
         <a href="#" class="view-all">
@@ -643,13 +832,16 @@ footer a{
 
     <div class="news-grid">
 
+
         <article class="news-card">
 
             <div class="news-image"></div>
 
             <div class="news-content">
 
-                <div class="tag">GÜNDEM</div>
+                <div class="tag">
+                    GÜNDEM
+                </div>
 
                 <h3>
                     Manifest yeni şarkısıyla gündemde!
@@ -670,7 +862,9 @@ footer a{
 
             <div class="news-content">
 
-                <div class="tag">YENİ ŞARKI</div>
+                <div class="tag">
+                    YENİ ŞARKI
+                </div>
 
                 <h3>
                     CRUSH! yeni projesini yayınladı
@@ -691,7 +885,9 @@ footer a{
 
             <div class="news-content">
 
-                <div class="tag">HABER</div>
+                <div class="tag">
+                    HABER
+                </div>
 
                 <h3>
                     Yılın müzik etkinlikleri açıklandı
@@ -712,7 +908,9 @@ footer a{
 
             <div class="news-content">
 
-                <div class="tag">RÖPORTAJ</div>
+                <div class="tag">
+                    RÖPORTAJ
+                </div>
 
                 <h3>
                     Aura'dan özel açıklamalar
@@ -726,6 +924,7 @@ footer a{
 
         </article>
 
+
     </div>
 
 </div>
@@ -733,7 +932,9 @@ footer a{
 </section>
 
 
-<!-- SANATÇILAR -->
+<!-- =========================
+     SANATÇILAR
+========================= -->
 
 <section id="sanatcilar">
 
@@ -767,26 +968,13 @@ footer a{
 
             <div class="artist-info">
 
-                <h3>MANIFEST</h3>
+                <h3>
+                    MANIFEST
+                </h3>
 
-                <p>6 ÜYE</p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>AURA</h3>
-
-                <p>4 ÜYE</p>
+                <p>
+                    6 ÜYE
+                </p>
 
                 <a href="#" class="artist-btn">
                     İNCELE
@@ -801,26 +989,13 @@ footer a{
 
             <div class="artist-info">
 
-                <h3>MANTRA</h3>
+                <h3>
+                    AURA
+                </h3>
 
-                <p>5 ÜYE</p>
-
-                <a href="#" class="artist-btn">
-                    İNCELE
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="artist">
-
-            <div class="artist-info">
-
-                <h3>RADİKAL</h3>
-
-                <p>5 ÜYE</p>
+                <p>
+                    4 ÜYE
+                </p>
 
                 <a href="#" class="artist-btn">
                     İNCELE
@@ -835,9 +1010,55 @@ footer a{
 
             <div class="artist-info">
 
-                <h3>CRUSH!</h3>
+                <h3>
+                    MANTRA
+                </h3>
 
-                <p>5 ÜYE</p>
+                <p>
+                    5 ÜYE
+                </p>
+
+                <a href="#" class="artist-btn">
+                    İNCELE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="artist">
+
+            <div class="artist-info">
+
+                <h3>
+                    RADİKAL
+                </h3>
+
+                <p>
+                    5 ÜYE
+                </p>
+
+                <a href="#" class="artist-btn">
+                    İNCELE
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="artist">
+
+            <div class="artist-info">
+
+                <h3>
+                    CRUSH!
+                </h3>
+
+                <p>
+                    5 ÜYE
+                </p>
 
                 <a href="#" class="artist-btn">
                     İNCELE
@@ -855,7 +1076,9 @@ footer a{
 </section>
 
 
-<!-- OYLAMA -->
+<!-- =========================
+     OYLAMALAR
+========================= -->
 
 <section id="oylamalar" class="vote-section">
 
@@ -881,8 +1104,6 @@ footer a{
         </div>
 
 
-        <!-- GERÇEK OYLAMA SAYFASINA GİDER -->
-
         <a href="oylamalar.html" class="vote-button">
             📊 HEMEN OY VER
         </a>
@@ -894,7 +1115,9 @@ footer a{
 </section>
 
 
-<!-- ÖDÜLLER -->
+<!-- =========================
+     ÖDÜLLER
+========================= -->
 
 <section id="oduller">
 
@@ -995,7 +1218,9 @@ footer a{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer id="hakkimizda">
 
