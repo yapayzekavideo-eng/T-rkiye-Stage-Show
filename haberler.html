@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TSS Haberler | Türkiye Stage Show</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    height:76px;
+    padding:0 5%;
+
+    background:#050505;
+    border-bottom:1px solid #29230f;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-main{
+    color:#d4af37;
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.logo-line{
+    width:1px;
+    height:34px;
+    background:#665521;
+}
+
+.logo-text{
+    color:#aaa;
+    font-size:9px;
+    line-height:1.1;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:27px;
+}
+
+nav a{
+    color:#ddd;
+    font-size:12px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.home-button{
+    border:1px solid #d4af37;
+    color:#d4af37;
+
+    padding:11px 20px;
+
+    border-radius:4px;
+
+    font-size:12px;
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.home-button:hover{
+    background:#d4af37;
+    color:#050505;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    width:92%;
+    max-width:1350px;
+
+    margin:45px auto 90px;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+    margin-bottom:45px;
+}
+
+.page-title small{
+    color:#d4af37;
+
+    letter-spacing:4px;
+
+    font-size:11px;
+    font-weight:bold;
+}
+
+.page-title h1{
+    font-size:clamp(48px,7vw,80px);
+
+    letter-spacing:-4px;
+
+    line-height:.9;
+
+    margin-top:10px;
+}
+
+.page-title h1 span{
+    color:#d4af37;
+}
+
+.page-title p{
+    color:#888;
+
+    max-width:650px;
+
+    margin-top:20px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   FEATURED NEWS
+========================= */
+
+.featured{
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr;
+
+    min-height:430px;
+
+    border:1px solid #332b15;
+
+    background:
+        linear-gradient(
+            135deg,
+            #191406,
+            #080808
+        );
+
+    margin-bottom:50px;
+}
+
+.featured-image{
+    min-height:430px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(212,175,55,.28),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #33270c,
+            #090909
+        );
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:100px;
+    font-weight:900;
+
+    color:rgba(212,175,55,.3);
+}
+
+.featured-content{
+    padding:50px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.news-label{
+    color:#d4af37;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+}
+
+.featured-content h2{
+    font-size:42px;
+
+    line-height:1.05;
+
+    margin-bottom:18px;
+}
+
+.featured-content p{
+    color:#888;
+
+    line-height:1.7;
+
+    font-size:14px;
+}
+
+.news-date{
+    color:#666;
+
+    font-size:11px;
+
+    margin-top:25px;
+}
+
+.read-button{
+    display:inline-block;
+
+    width:max-content;
+
+    margin-top:25px;
+
+    border:1px solid #d4af37;
+
+    color:#d4af37;
+
+    padding:11px 18px;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.read-button:hover{
+    background:#d4af37;
+
+    color:#050505;
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-label{
+    color:#d4af37;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+}
+
+.section-title{
+    font-size:38px;
+
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   NEWS GRID
+========================= */
+
+.news-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+.news-card{
+    border:1px solid #292929;
+
+    background:#0c0c0c;
+
+    overflow:hidden;
+
+    transition:.25s;
+
+    cursor:pointer;
+}
+
+.news-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#806b2d;
+}
+
+.news-image{
+    height:210px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(212,175,55,.2),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #30260d,
+            #080808
+        );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:rgba(212,175,55,.25);
+
+    font-size:65px;
+
+    font-weight:900;
+}
+
+.news-content{
+    padding:22px;
+}
+
+.news-category{
+    color:#d4af37;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+.news-card h3{
+    font-size:21px;
+
+    line-height:1.2;
+}
+
+.news-card p{
+    color:#777;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    margin-top:10px;
+}
+
+.card-date{
+    color:#555;
+
+    font-size:10px;
+
+    margin-top:18px;
+}
+
+
+/* =========================
+   NEWS LIST
+========================= */
+
+.latest{
+    margin-top:65px;
+}
+
+.latest-list{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.latest-item{
+    display:grid;
+
+    grid-template-columns:100px 1fr auto;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:20px;
+
+    border:1px solid #242424;
+
+    background:#0b0b0b;
+
+    transition:.2s;
+}
+
+.latest-item:hover{
+    border-color:#665521;
+}
+
+.latest-number{
+    color:rgba(212,175,55,.25);
+
+    font-size:38px;
+
+    font-weight:900;
+}
+
+.latest-info h3{
+    font-size:17px;
+}
+
+.latest-info p{
+    color:#777;
+
+    font-size:11px;
+
+    margin-top:7px;
+}
+
+.latest-date{
+    color:#666;
+
+    font-size:10px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #29230f;
+
+    padding:45px 5%;
+
+    background:#030303;
+}
+
+.footer-inner{
+    max-width:1350px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-logo{
+    color:#d4af37;
+
+    font-size:30px;
+
+    font-weight:900;
+}
+
+.footer-text{
+    color:#666;
+
+    font-size:12px;
+
+    margin-top:8px;
+}
+
+.footer-links{
+    display:flex;
+
+    gap:20px;
+}
+
+.footer-links a{
+    color:#777;
+
+    font-size:11px;
+}
+
+.footer-links a:hover{
+    color:#d4af37;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    header{
+        height:auto;
+
+        padding:17px 5%;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+    }
+
+    nav{
+        order:3;
+
+        width:100%;
+
+        overflow-x:auto;
+    }
+
+    nav a{
+        white-space:nowrap;
+    }
+
+    .home-button{
+        display:none;
+    }
+
+    .featured{
+        grid-template-columns:1fr;
+    }
+
+    .featured-image{
+        min-height:280px;
+    }
+
+    .news-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    main{
+        width:94%;
+
+        margin-top:30px;
+    }
+
+    .page-title h1{
+        font-size:50px;
+    }
+
+    .featured-content{
+        padding:30px;
+    }
+
+    .featured-content h2{
+        font-size:31px;
+    }
+
+    .featured-image{
+        min-height:230px;
+
+        font-size:75px;
+    }
+
+    .news-grid{
+        grid-template-columns:1fr;
+    }
+
+    .latest-item{
+        grid-template-columns:55px 1fr;
+
+        gap:15px;
+    }
+
+    .latest-date{
+        display:none;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:25px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-main">
+            TSS
+        </div>
+
+        <div class="logo-line"></div>
+
+        <div class="logo-text">
+            TÜRKİYE<br>
+            STAGE<br>
+            SHOW
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            ANA SAYFA
+        </a>
+
+        <a href="haberler.html">
+            HABERLER
+        </a>
+
+        <a href="sanatcilar.html">
+            SANATÇILAR
+        </a>
+
+        <a href="oylamalar.html">
+            OYLAMALAR
+        </a>
+
+        <a href="oduller.html">
+            ÖDÜLLER
+        </a>
+
+    </nav>
+
+
+    <a href="index.html" class="home-button">
+        ← ANA SAYFA
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- TITLE -->
+
+    <div class="page-title">
+
+        <small>
+            TSS NEWS • 2026
+        </small>
+
+        <h1>
+            <span>SON</span><br>
+            HABERLER.
+        </h1>
+
+        <p>
+            Türkiye müzik sahnesinden son gelişmeler,
+            yeni projeler, başarılar ve TSS özel haberleri.
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         FEATURED
+    ========================= -->
+
+    <article class="featured">
+
+        <div class="featured-image">
+            TSS
+        </div>
+
+
+        <div class="featured-content">
+
+            <div class="news-label">
+                GÜNÜN ÖNE ÇIKANI
+            </div>
+
+            <h2>
+                Türkiye müzik sahnesinde
+                yeni dönem başlıyor.
+            </h2>
+
+            <p>
+                TSS News olarak müzik dünyasındaki
+                en önemli gelişmeleri, yeni sanatçıları
+                ve yükselen projeleri yakından takip ediyoruz.
+            </p>
+
+            <div class="news-date">
+                TSS NEWS • 2026
+            </div>
+
+            <a href="#" class="read-button">
+                HABERİ OKU →
+            </a>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         NEWS
+    ========================= -->
+
+    <section>
+
+        <div class="section-label">
+            SON GELİŞMELER
+        </div>
+
+        <h2 class="section-title">
+            Gündemden.
+        </h2>
+
+
+        <div class="news-grid">
+
+
+            <!-- NEWS 1 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    M
+                </div>
+
+                <div class="news-content">
+
+                    <div class="news-category">
+                        MÜZİK
+                    </div>
+
+                    <h3>
+                        MANIFEST yeni başarısıyla
+                        gündemde.
+                    </h3>
+
+                    <p>
+                        Türkiye'nin yükselen kız gruplarından
+                        MANIFEST müzik dünyasındaki etkisini
+                        artırmaya devam ediyor.
+                    </p>
+
+                    <div class="card-date">
+                        TSS NEWS • 2026
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEWS 2 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    A
+                </div>
+
+                <div class="news-content">
+
+                    <div class="news-category">
+                        SANATÇILAR
+                    </div>
+
+                    <h3>
+                        Yeni nesil gruplar
+                        sahneye çıkıyor.
+                    </h3>
+
+                    <p>
+                        Türk müzik sahnesinde yeni grupların
+                        ve genç sanatçıların yükselişi dikkat çekiyor.
+                    </p>
+
+                    <div class="card-date">
+                        TSS NEWS • 2026
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEWS 3 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    ♪
+                </div>
+
+                <div class="news-content">
+
+                    <div class="news-category">
+                        YENİ MÜZİK
+                    </div>
+
+                    <h3>
+                        2026'nın en çok beklenen
+                        şarkıları.
+                    </h3>
+
+                    <p>
+                        Müzikseverlerin merakla beklediği
+                        yeni projeler ve şarkılar gündemde.
+                    </p>
+
+                    <div class="card-date">
+                        TSS NEWS • 2026
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEWS 4 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    ★
+                </div>
+
+                <div class="news-content">
+
+                    <div class="news-category">
+                        BAŞARI
+                    </div>
+
+                    <h3>
+                        Türk sanatçılardan
+                        uluslararası başarı.
+                    </h3>
+
+                    <p>
+                        Türkiye'den çıkan sanatçılar
+                        uluslararası müzik listelerinde
+                        dikkat çekmeye devam ediyor.
+                    </p>
+
+                    <div class="card-date">
+                        TSS NEWS • 2026
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEWS 5 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    ✦
+                </div>
+
+                <div class="news-content">
+
+                    <div class="news-category">
+                        SAHNE
+                    </div>
+
+                    <h3>
+                        Yeni sahne projeleri
+                        müzik dünyasını hareketlendiriyor.
+                    </h3>
+
+                    <p>
+                        Konserler, sahne şovları ve yeni
+                        performans projeleri izleyicilerle buluşuyor.
+                    </p>
+
+                    <div class="card-date">
+                        TSS NEWS • 2026
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- NEWS 6 -->
+
+            <article class="news-card">
+
+                <div class="news-image">
+                    T
+                </div>
+
+                <div class="news-content">
+
+                    <div class="news-category">
+                        TSS ÖZEL
+                    </div>
+
+                    <h3>
+                        TSS Awards 2026
+                        için geri sayım başladı.
+                    </h3>
+
+                    <p>
+                        Yılın en iyilerinin belirleneceği
+                        TSS Awards oylamaları devam ediyor.
+                    </p>
+
+                    <div class="card-date">
+                        TSS NEWS • 2026
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LATEST
+    ========================= -->
+
+    <section class="latest">
+
+        <div class="section-label">
+            SON DAKİKA
+        </div>
+
+        <h2 class="section-title">
+            Kısa Haberler.
+        </h2>
+
+
+        <div class="latest-list">
+
+
+            <article class="latest-item">
+
+                <div class="latest-number">
+                    01
+                </div>
+
+                <div class="latest-info">
+
+                    <h3>
+                        TSS Awards 2026 oylamaları başladı.
+                    </h3>
+
+                    <p>
+                        Favori adayını seçmek için
+                        oylamalar sayfasını ziyaret et.
+                    </p>
+
+                </div>
+
+                <div class="latest-date">
+                    2026
+                </div>
+
+            </article>
+
+
+
+            <article class="latest-item">
+
+                <div class="latest-number">
+                    02
+                </div>
+
+                <div class="latest-info">
+
+                    <h3>
+                        Yeni müzik projeleri için
+                        hazırlıklar hızlandı.
+                    </h3>
+
+                    <p>
+                        Sanatçılar yeni sezon projeleri
+                        için çalışmalarını sürdürüyor.
+                    </p>
+
+                </div>
+
+                <div class="latest-date">
+                    2026
+                </div>
+
+            </article>
+
+
+
+            <article class="latest-item">
+
+                <div class="latest-number">
+                    03
+                </div>
+
+                <div class="latest-info">
+
+                    <h3>
+                        Türkiye müzik sahnesinde
+                        yeni isimler yükseliyor.
+                    </h3>
+
+                    <p>
+                        Genç sanatçılar ve yeni gruplar
+                        dikkat çekmeye devam ediyor.
+                    </p>
+
+                </div>
+
+                <div class="latest-date">
+                    2026
+                </div>
+
+            </article>
+
+
+
+            <article class="latest-item">
+
+                <div class="latest-number">
+                    04
+                </div>
+
+                <div class="latest-info">
+
+                    <h3>
+                        TSS yeni içerikleriyle
+                        müzik gündemini takip ediyor.
+                    </h3>
+
+                    <p>
+                        Haberler, sanatçılar ve ödüller
+                        tek platformda.
+                    </p>
+
+                </div>
+
+                <div class="latest-date">
+                    2026
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+                TSS
+            </div>
+
+            <div class="footer-text">
+                Türkiye Stage Show • TSS News 2026
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                ANA SAYFA
+            </a>
+
+            <a href="haberler.html">
+                HABERLER
+            </a>
+
+            <a href="sanatcilar.html">
+                SANATÇILAR
+            </a>
+
+            <a href="oylamalar.html">
+                OYLAMALAR
+            </a>
+
+            <a href="oduller.html">
+                ÖDÜLLER
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
