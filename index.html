@@ -3,140 +3,424 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Türkiye Stage Show</title>
+
+<title>Türkiye Stage Show | TSS 2026</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f7f7f7;
-    color: #111;
+html{
+    scroll-behavior:smooth;
 }
 
-header {
-    background: #111;
-    color: white;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#080808;
+    color:#fff;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+a{
+    text-decoration:none;
+    color:inherit;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(8,8,8,.94);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #252525;
 }
 
-.hero {
-    min-height: 500px;
-    background: linear-gradient(135deg, #111, #333);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 20px;
+.navbar{
+    max-width:1250px;
+    margin:auto;
+    height:78px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
 }
 
-.hero h1 {
-    font-size: 55px;
-    margin-bottom: 15px;
+.logo{
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:2px;
 }
 
-.hero p {
-    font-size: 20px;
-    margin-bottom: 30px;
+.logo span{
+    color:#d6ad5c;
 }
 
-.button {
-    display: inline-block;
-    background: #fff;
-    color: #111;
-    padding: 14px 30px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
+nav{
+    display:flex;
+    gap:28px;
 }
 
-section {
-    padding: 70px 8%;
+nav a{
+    color:#ccc;
+    font-size:14px;
+    font-weight:bold;
+    transition:.2s;
 }
 
-.section-title {
-    font-size: 32px;
-    margin-bottom: 35px;
+nav a:hover{
+    color:#d6ad5c;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 25px;
+.vote-top{
+    background:#d6ad5c;
+    color:#111;
+    padding:12px 20px;
+    border-radius:30px;
+    font-weight:900;
+    font-size:13px;
 }
 
-.card {
-    background: white;
-    border-radius: 18px;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+/* HERO */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 75% 35%,rgba(214,173,92,.25),transparent 30%),
+    radial-gradient(circle at 20% 80%,rgba(255,255,255,.07),transparent 25%),
+    #090909;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.hero-content{
+    width:1250px;
+    max-width:100%;
+    margin:auto;
+    padding:80px 25px;
+    position:relative;
+    z-index:2;
 }
 
-.card h3 {
-    margin-bottom: 12px;
+.badge{
+    display:inline-block;
+    border:1px solid #5d4a28;
+    color:#d6ad5c;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin-bottom:25px;
 }
 
-.vote {
-    background: #111;
-    color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding: 50px 20px;
+.hero h1{
+    font-size:clamp(45px,7vw,85px);
+    line-height:.95;
+    max-width:800px;
+    letter-spacing:-3px;
 }
 
-.vote h2 {
-    font-size: 35px;
-    margin-bottom: 15px;
+.hero h1 span{
+    color:#d6ad5c;
 }
 
-footer {
-    background: #111;
-    color: white;
-    text-align: center;
-    padding: 30px;
+.hero p{
+    color:#aaa;
+    max-width:600px;
+    font-size:18px;
+    line-height:1.7;
+    margin:28px 0;
 }
 
-@media(max-width:700px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 27px;
+    border-radius:8px;
+    font-weight:900;
+    font-size:14px;
+}
+
+.btn-gold{
+    background:#d6ad5c;
+    color:#111;
+}
+
+.btn-dark{
+    border:1px solid #444;
+    color:#fff;
+}
+
+/* SECTIONS */
+
+.container{
+    max-width:1250px;
+    margin:auto;
+    padding:85px 25px;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    margin-bottom:35px;
+}
+
+.section-head h2{
+    font-size:34px;
+}
+
+.section-head p{
+    color:#777;
+    font-size:13px;
+}
+
+.gold{
+    color:#d6ad5c;
+}
+
+/* NEWS */
+
+.news-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:18px;
+}
+
+.news-card{
+    min-height:270px;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid #242424;
+    background:#111;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:end;
+    position:relative;
+}
+
+.news-card:first-child{
+    min-height:380px;
+    background:
+    linear-gradient(transparent,#000),
+    radial-gradient(circle at 70% 20%,#59451f,#111 55%);
+}
+
+.news-card h3{
+    font-size:22px;
+    margin:10px 0;
+}
+
+.news-card p{
+    color:#999;
+    line-height:1.5;
+}
+
+.news-tag{
+    color:#d6ad5c;
+    font-size:11px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* ARTISTS */
+
+.artist-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.artist{
+    background:#111;
+    border:1px solid #242424;
+    border-radius:14px;
+    padding:25px;
+    min-height:190px;
+    transition:.25s;
+}
+
+.artist:hover{
+    transform:translateY(-5px);
+    border-color:#705a31;
+}
+
+.artist-number{
+    color:#555;
+    font-size:12px;
+}
+
+.artist h3{
+    margin-top:65px;
+    font-size:23px;
+}
+
+.artist p{
+    color:#777;
+    margin-top:7px;
+}
+
+/* VOTE */
+
+.vote-section{
+    background:
+    radial-gradient(circle at 50% 0%,rgba(214,173,92,.18),transparent 45%),
+    #0d0d0d;
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+}
+
+.vote-box{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+}
+
+.vote-box h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.vote-box p{
+    color:#999;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.vote-button{
+    display:inline-block;
+    background:#d6ad5c;
+    color:#111;
+    padding:18px 45px;
+    border-radius:8px;
+    font-weight:900;
+    font-size:15px;
+}
+
+/* AWARDS */
+
+.award-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.award{
+    padding:30px 22px;
+    border:1px solid #242424;
+    border-radius:14px;
+    background:#101010;
+}
+
+.trophy{
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.award h3{
+    margin-bottom:10px;
+}
+
+.award p{
+    color:#777;
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid #222;
+    padding:50px 25px;
+    text-align:center;
+    background:#050505;
+}
+
+.footer-logo{
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#666;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
     }
 
-    nav a {
-        margin: 0 7px;
-        font-size: 13px;
+    .news-grid{
+        grid-template-columns:1fr;
     }
 
-    .hero h1 {
-        font-size: 38px;
+    .artist-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .award-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        height:68px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .vote-top{
+        padding:9px 13px;
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .container{
+        padding:60px 18px;
+    }
+
+    .section-head h2{
+        font-size:27px;
+    }
+
+    .artist-grid,
+    .award-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vote-box h2{
+        font-size:36px;
     }
 }
 </style>
@@ -145,110 +429,227 @@ footer {
 <body>
 
 <header>
-    <div class="logo">TÜRKİYE STAGE SHOW</div>
+    <div class="navbar">
 
-    <nav>
-        <a href="#haberler">Haberler</a>
-        <a href="#sanatcilar">Sanatçılar</a>
-        <a href="#oylamalar">Oylamalar</a>
-        <a href="#oduller">Ödüller</a>
-    </nav>
+        <div class="logo">
+            TÜRKİYE <span>STAGE SHOW</span>
+        </div>
+
+        <nav>
+            <a href="#haberler">HABERLER</a>
+            <a href="#sanatcilar">SANATÇILAR</a>
+            <a href="#oylamalar">OYLAMALAR</a>
+            <a href="#oduller">ÖDÜLLER</a>
+        </nav>
+
+        <a href="#oylamalar" class="vote-top">OY VER</a>
+
+    </div>
 </header>
 
+
 <section class="hero">
-    <div>
-        <h1>Türkiye Stage Show</h1>
-        <p>Türkiye'nin müzik ve sahne dünyasını keşfet.</p>
-        <a href="#oylamalar" class="button">OY VER</a>
+
+    <div class="hero-content">
+
+        <div class="badge">TSS • 2026</div>
+
+        <h1>
+            TÜRKİYE'NİN<br>
+            <span>MÜZİK SAHNESİ</span>
+        </h1>
+
+        <p>
+            Türkiye müzik dünyasının nabzını tut.
+            Haberleri keşfet, sanatçıları takip et ve
+            2026'nın en iyilerini sen belirle.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#oylamalar" class="btn btn-gold">
+                🗳 OYLAMALARA GİT
+            </a>
+
+            <a href="#oduller" class="btn btn-dark">
+                🏆 2026 ÖDÜLLERİ
+            </a>
+        </div>
+
     </div>
+
 </section>
+
 
 <section id="haberler">
-    <h2 class="section-title">📰 Haberler</h2>
 
-    <div class="cards">
-        <div class="card">
-            <h3>Müzik Dünyasından Son Haberler</h3>
-            <p>Türkiye müzik dünyasındaki gelişmeleri takip et.</p>
+<div class="container">
+
+    <div class="section-head">
+        <div>
+            <div class="gold">TSS GÜNDEM</div>
+            <h2>Son Haberler</h2>
         </div>
 
-        <div class="card">
-            <h3>Yeni Şarkılar</h3>
-            <p>Yeni çıkan şarkıları ve müzik projelerini keşfet.</p>
-        </div>
-
-        <div class="card">
-            <h3>Gündem</h3>
-            <p>Sanatçıların ve grupların son gelişmeleri burada.</p>
-        </div>
+        <p>Müzik dünyasından gelişmeler</p>
     </div>
+
+    <div class="news-grid">
+
+        <article class="news-card">
+            <div class="news-tag">MÜZİK • GÜNDEM</div>
+            <h3>Türkiye müzik sahnesinde yeni dönem</h3>
+            <p>En yeni gelişmeler ve müzik dünyasının gündemi.</p>
+        </article>
+
+        <article class="news-card">
+            <div class="news-tag">YENİ ŞARKI</div>
+            <h3>Haftanın yeni yayınları</h3>
+            <p>Bu haftanın öne çıkan şarkıları.</p>
+        </article>
+
+        <article class="news-card">
+            <div class="news-tag">TSS</div>
+            <h3>2026 ödülleri başladı</h3>
+            <p>Favorini seç ve oyunu kullan.</p>
+        </article>
+
+    </div>
+
+</div>
+
 </section>
+
 
 <section id="sanatcilar">
-    <h2 class="section-title">🎤 Sanatçılar</h2>
 
-    <div class="cards">
-        <div class="card">
+<div class="container">
+
+    <div class="section-head">
+        <div>
+            <div class="gold">SAHNE</div>
+            <h2>Sanatçılar & Gruplar</h2>
+        </div>
+    </div>
+
+    <div class="artist-grid">
+
+        <div class="artist">
+            <div class="artist-number">01 / GRUP</div>
             <h3>Manifest</h3>
-            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+            <p>TSS sanatçı profili</p>
         </div>
 
-        <div class="card">
+        <div class="artist">
+            <div class="artist-number">02 / GRUP</div>
             <h3>Aura</h3>
-            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+            <p>TSS sanatçı profili</p>
         </div>
 
-        <div class="card">
+        <div class="artist">
+            <div class="artist-number">03 / GRUP</div>
             <h3>Mantra</h3>
-            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+            <p>TSS sanatçı profili</p>
         </div>
 
-        <div class="card">
+        <div class="artist">
+            <div class="artist-number">04 / GRUP</div>
             <h3>Radikal</h3>
-            <p>Grup hakkında haberler, şarkılar ve gelişmeler.</p>
+            <p>TSS sanatçı profili</p>
         </div>
+
     </div>
+
+</div>
+
 </section>
 
-<section id="oylamalar">
-    <div class="vote">
-        <h2>🗳️ OYLAMALAR</h2>
-        <p>Favori sanatçını veya grubunu seç ve oyunu kullan!</p>
-        <br>
-        <a href="#" class="button">OY VER</a>
+
+<section id="oylamalar" class="vote-section">
+
+<div class="container">
+
+    <div class="vote-box">
+
+        <div class="gold">TSS 2026</div>
+
+        <h2>Kararı <span class="gold">sen ver.</span></h2>
+
+        <p>
+            2026'nın en başarılı sanatçılarını, gruplarını
+            ve şarkılarını belirlemek için oyunu kullan.
+        </p>
+
+        <a href="#" class="vote-button">
+            OYLAMALARA GİT →
+        </a>
+
     </div>
+
+</div>
+
 </section>
+
 
 <section id="oduller">
-    <h2 class="section-title">🏆 2026 Ödülleri</h2>
 
-    <div class="cards">
-        <div class="card">
+<div class="container">
+
+    <div class="section-head">
+        <div>
+            <div class="gold">TSS AWARDS</div>
+            <h2>2026 Ödülleri</h2>
+        </div>
+    </div>
+
+    <div class="award-grid">
+
+        <div class="award">
+            <div class="trophy">🏆</div>
             <h3>Yılın Grubu</h3>
-            <p>2026'nın en başarılı grubunu seç.</p>
+            <p>2026'nın en başarılı müzik grubunu belirle.</p>
         </div>
 
-        <div class="card">
+        <div class="award">
+            <div class="trophy">🎵</div>
             <h3>Yılın Şarkısı</h3>
-            <p>Yılın en iyi şarkısı için oyunu kullan.</p>
+            <p>Yılın en büyük hitini sen seç.</p>
         </div>
 
-        <div class="card">
+        <div class="award">
+            <div class="trophy">☀️</div>
             <h3>Yılın Yaz Şarkısı</h3>
-            <p>2026'nın yaz hitini belirle.</p>
+            <p>2026 yazının favorisini belirle.</p>
         </div>
 
-        <div class="card">
+        <div class="award">
+            <div class="trophy">⭐</div>
             <h3>Yılın Çıkışı</h3>
             <p>Yılın en dikkat çeken çıkışını seç.</p>
         </div>
+
     </div>
+
+</div>
+
 </section>
 
+
 <footer>
-    <p>© 2026 Türkiye Stage Show</p>
+
+    <div class="footer-logo">
+        TÜRKİYE <span class="gold">STAGE SHOW</span>
+    </div>
+
+    <p>
+        Türkiye müzik dünyasının dijital sahnesi.
+    </p>
+
     <br>
-    <p>Müzik • Haber • Oylama • Ödüller</p>
+
+    <p>
+        © 2026 Türkiye Stage Show
+    </p>
+
 </footer>
 
 </body>
