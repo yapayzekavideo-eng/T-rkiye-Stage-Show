@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Türkiye Stage Show | TSS</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -28,11 +30,15 @@ a{
     color:inherit;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     height:76px;
     padding:0 5%;
+
     background:#050505;
     border-bottom:1px solid #29230f;
 
@@ -91,13 +97,26 @@ nav a:hover{
 .vote-top{
     border:1px solid #d4af37;
     color:#d4af37;
+
     padding:11px 20px;
+
     border-radius:4px;
+
     font-weight:bold;
     font-size:12px;
+
+    transition:.2s;
 }
 
-/* MAIN */
+.vote-top:hover{
+    background:#d4af37;
+    color:#050505;
+}
+
+
+/* =========================
+   MAIN
+========================= */
 
 main{
     width:92%;
@@ -105,7 +124,10 @@ main{
     margin:35px auto 80px;
 }
 
-/* INTRO */
+
+/* =========================
+   INTRO
+========================= */
 
 .intro{
     margin-bottom:25px;
@@ -136,22 +158,32 @@ main{
     line-height:1.6;
 }
 
-/* MOSAIC */
+
+/* =========================
+   MOSAIC
+========================= */
 
 .mosaic{
     display:grid;
+
     grid-template-columns:repeat(12,1fr);
+
     grid-auto-rows:90px;
+
     gap:12px;
 }
 
-/* GENERAL CARD */
+
+/* =========================
+   GENERAL CARD
+========================= */
 
 .card{
     position:relative;
     overflow:hidden;
 
     border:1px solid #302a16;
+
     background:#0d0d0d;
 
     transition:.3s;
@@ -159,7 +191,9 @@ main{
 
 .card:hover{
     transform:translateY(-4px);
+
     border-color:#d4af37;
+
     box-shadow:0 15px 40px rgba(212,175,55,.08);
 }
 
@@ -182,9 +216,12 @@ main{
 
 .card-label{
     color:#d4af37;
+
     font-size:10px;
     font-weight:bold;
+
     letter-spacing:2px;
+
     margin-bottom:8px;
 }
 
@@ -195,12 +232,18 @@ main{
 
 .card p{
     color:#aaa;
+
     font-size:12px;
+
     margin-top:8px;
+
     line-height:1.5;
 }
 
-/* TSS HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero-card{
     grid-column:span 8;
@@ -221,16 +264,23 @@ main{
 
 .hero-card:after{
     content:"TSS";
+
     position:absolute;
+
     right:-30px;
     bottom:-80px;
 
     font-size:250px;
+
     font-weight:900;
+
     color:rgba(212,175,55,.035);
 }
 
-/* NEWS 1 */
+
+/* =========================
+   NEWS 1
+========================= */
 
 .news-one{
     grid-column:span 4;
@@ -244,7 +294,10 @@ main{
         );
 }
 
-/* NEWS 2 */
+
+/* =========================
+   NEWS 2
+========================= */
 
 .news-two{
     grid-column:span 4;
@@ -258,7 +311,10 @@ main{
         );
 }
 
-/* VOTE */
+
+/* =========================
+   VOTE
+========================= */
 
 .vote-card{
     grid-column:span 4;
@@ -279,25 +335,38 @@ main{
 
 .vote-card .big-icon{
     font-size:48px;
+
     margin-bottom:auto;
 }
 
 .vote-link{
     display:inline-block;
+
     margin-top:16px;
 
     padding:12px 20px;
 
     background:#d4af37;
+
     color:#050505;
 
     font-size:12px;
+
     font-weight:bold;
 
     border-radius:3px;
+
+    width:max-content;
 }
 
-/* NEWS 3 */
+.vote-link:hover{
+    background:#f0d56a;
+}
+
+
+/* =========================
+   NEWS 3
+========================= */
 
 .news-three{
     grid-column:span 4;
@@ -311,7 +380,35 @@ main{
         );
 }
 
-/* ARTISTS */
+
+/* =========================
+   NEWS LINK
+========================= */
+
+.news-link{
+    display:inline-block;
+
+    margin-top:14px;
+
+    color:#d4af37;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+
+    width:max-content;
+}
+
+.news-link:hover{
+    color:#f0d56a;
+}
+
+
+/* =========================
+   ARTISTS
+========================= */
 
 .artists-card{
     grid-column:span 8;
@@ -322,15 +419,19 @@ main{
 
 .artist-mini-grid{
     position:absolute;
+
     inset:0;
 
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
 }
 
 .artist-mini{
     position:relative;
+
     border-right:1px solid #282313;
+
     overflow:hidden;
 }
 
@@ -352,21 +453,26 @@ main{
 
 .artist-mini span{
     position:absolute;
+
     left:15px;
     bottom:15px;
 
     font-size:16px;
+
     font-weight:900;
 }
 
 .artists-overlay{
     position:absolute;
+
     inset:0;
 
     padding:22px;
 
     display:flex;
+
     align-items:flex-start;
+
     justify-content:space-between;
 
     background:
@@ -383,11 +489,16 @@ main{
 
 .artists-overlay a{
     color:#d4af37;
+
     font-size:11px;
+
     font-weight:bold;
 }
 
-/* AWARDS */
+
+/* =========================
+   AWARDS
+========================= */
 
 .awards-card{
     grid-column:span 4;
@@ -404,10 +515,14 @@ main{
 
 .trophy{
     font-size:52px;
+
     margin-bottom:auto;
 }
 
-/* BIG NEWS */
+
+/* =========================
+   BIG NEWS
+========================= */
 
 .big-news{
     grid-column:span 8;
@@ -421,7 +536,10 @@ main{
         );
 }
 
-/* SMALL NEWS */
+
+/* =========================
+   SMALL NEWS
+========================= */
 
 .small-news{
     grid-column:span 4;
@@ -435,14 +553,19 @@ main{
         );
 }
 
-/* BOTTOM CTA */
+
+/* =========================
+   BOTTOM CTA
+========================= */
 
 .bottom-card{
     grid-column:span 12;
     grid-row:span 2;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     padding:35px;
@@ -465,50 +588,70 @@ main{
 
 .bottom-button{
     background:#d4af37;
+
     color:#050505;
 
     padding:15px 25px;
 
     font-weight:bold;
+
     font-size:13px;
 }
 
-/* FOOTER */
+.bottom-button:hover{
+    background:#f0d56a;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     border-top:1px solid #29230f;
+
     padding:45px 5%;
+
     background:#030303;
 }
 
 .footer-inner{
     max-width:1350px;
+
     margin:auto;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 }
 
 .footer-logo{
     color:#d4af37;
+
     font-size:30px;
+
     font-weight:900;
 }
 
 .footer-text{
     color:#666;
+
     font-size:12px;
+
     line-height:1.6;
 }
 
 .footer-links{
     display:flex;
+
     gap:20px;
 }
 
 .footer-links a{
     color:#777;
+
     font-size:11px;
 }
 
@@ -516,21 +659,30 @@ footer{
     color:#d4af37;
 }
 
-/* TABLET */
+
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:900px){
 
     header{
         height:auto;
+
         padding:17px 5%;
+
         flex-wrap:wrap;
+
         gap:15px;
     }
 
     nav{
         order:3;
+
         width:100%;
+
         overflow-x:auto;
+
         padding-bottom:4px;
     }
 
@@ -544,6 +696,7 @@ footer{
 
     .mosaic{
         grid-template-columns:repeat(6,1fr);
+
         grid-auto-rows:90px;
     }
 
@@ -589,22 +742,28 @@ footer{
 
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
     main{
         width:94%;
+
         margin-top:25px;
     }
 
     .intro h1{
         font-size:48px;
+
         letter-spacing:-3px;
     }
 
     .mosaic{
         display:flex;
+
         flex-direction:column;
     }
 
@@ -635,8 +794,11 @@ footer{
         min-height:230px;
 
         flex-direction:column;
+
         align-items:flex-start;
+
         justify-content:center;
+
         gap:25px;
     }
 
@@ -650,7 +812,9 @@ footer{
 
     .footer-inner{
         flex-direction:column;
+
         align-items:flex-start;
+
         gap:25px;
     }
 
@@ -659,16 +823,26 @@ footer{
     }
 
 }
+
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
     <div class="logo">
 
-        <div class="logo-main">TSS</div>
+        <div class="logo-main">
+            TSS
+        </div>
 
         <div class="logo-line"></div>
 
@@ -680,21 +854,36 @@ footer{
 
     </div>
 
+
     <nav>
 
-        <a href="index.html">ANA SAYFA</a>
+        <a href="index.html">
+            ANA SAYFA
+        </a>
 
-        <a href="#haberler">HABERLER</a>
+        <!-- HABERLER ARTIK AYRI SAYFAYA GİDİYOR -->
+        <a href="haberler.html">
+            HABERLER
+        </a>
 
-        <a href="#sanatcilar">SANATÇILAR</a>
+        <a href="#sanatcilar">
+            SANATÇILAR
+        </a>
 
-        <a href="oylamalar.html">OYLAMALAR</a>
+        <a href="oylamalar.html">
+            OYLAMALAR
+        </a>
 
-        <a href="#oduller">ÖDÜLLER</a>
+        <a href="#oduller">
+            ÖDÜLLER
+        </a>
 
-        <a href="#hakkimizda">HAKKIMIZDA</a>
+        <a href="#hakkimizda">
+            HAKKIMIZDA
+        </a>
 
     </nav>
+
 
     <a href="oylamalar.html" class="vote-top">
         🗳 OY VER
@@ -703,9 +892,13 @@ footer{
 </header>
 
 
+
 <main>
 
-    <!-- INTRO -->
+
+    <!-- =========================
+         INTRO
+    ========================= -->
 
     <div class="intro">
 
@@ -727,9 +920,12 @@ footer{
     </div>
 
 
-    <!-- MOSAIC -->
 
-    <div class="mosaic" id="haberler">
+    <!-- =========================
+         MOSAIC
+    ========================= -->
+
+    <div class="mosaic">
 
 
         <!-- HERO -->
@@ -757,7 +953,10 @@ footer{
         </article>
 
 
-        <!-- NEWS -->
+
+        <!-- =========================
+             HABER 1
+        ========================= -->
 
         <article class="card news-one">
 
@@ -776,12 +975,19 @@ footer{
                     Müzik dünyasından son gelişmeler.
                 </p>
 
+                <a href="haberler.html" class="news-link">
+                    TÜM HABERLER →
+                </a>
+
             </div>
 
         </article>
 
 
-        <!-- VOTE -->
+
+        <!-- =========================
+             OYLAMA
+        ========================= -->
 
         <article class="card vote-card">
 
@@ -812,7 +1018,10 @@ footer{
         </article>
 
 
-        <!-- NEWS -->
+
+        <!-- =========================
+             HABER 2
+        ========================= -->
 
         <article class="card news-two">
 
@@ -830,12 +1039,19 @@ footer{
                     Yeni projeler ve müzik haberleri.
                 </p>
 
+                <a href="haberler.html" class="news-link">
+                    HABERLERE GİT →
+                </a>
+
             </div>
 
         </article>
 
 
-        <!-- NEWS -->
+
+        <!-- =========================
+             HABER 3
+        ========================= -->
 
         <article class="card news-three">
 
@@ -850,12 +1066,19 @@ footer{
                     yeni haberler.
                 </h2>
 
+                <a href="haberler.html" class="news-link">
+                    HABERLER →
+                </a>
+
             </div>
 
         </article>
 
 
-        <!-- ARTISTS -->
+
+        <!-- =========================
+             SANATÇILAR
+        ========================= -->
 
         <article class="card artists-card" id="sanatcilar">
 
@@ -890,7 +1113,10 @@ footer{
         </article>
 
 
-        <!-- AWARDS -->
+
+        <!-- =========================
+             ÖDÜLLER
+        ========================= -->
 
         <article class="card awards-card" id="oduller">
 
@@ -918,7 +1144,10 @@ footer{
         </article>
 
 
-        <!-- BIG NEWS -->
+
+        <!-- =========================
+             BÜYÜK HABER
+        ========================= -->
 
         <article class="card big-news">
 
@@ -938,12 +1167,19 @@ footer{
                     müzik olaylarını takip et.
                 </p>
 
+                <a href="haberler.html" class="news-link">
+                    HABERLERİ KEŞFET →
+                </a>
+
             </div>
 
         </article>
 
 
-        <!-- SMALL NEWS -->
+
+        <!-- =========================
+             KÜÇÜK HABER
+        ========================= -->
 
         <article class="card small-news">
 
@@ -958,12 +1194,19 @@ footer{
                     özel açıklamalar.
                 </h2>
 
+                <a href="haberler.html" class="news-link">
+                    HABERLERE GİT →
+                </a>
+
             </div>
 
         </article>
 
 
-        <!-- BOTTOM -->
+
+        <!-- =========================
+             BOTTOM
+        ========================= -->
 
         <article class="card bottom-card">
 
@@ -991,6 +1234,11 @@ footer{
 </main>
 
 
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer id="hakkimizda">
 
     <div class="footer-inner">
@@ -1015,6 +1263,10 @@ footer{
                 ANA SAYFA
             </a>
 
+            <a href="haberler.html">
+                HABERLER
+            </a>
+
             <a href="oylamalar.html">
                 OYLAMALAR
             </a>
@@ -1032,6 +1284,7 @@ footer{
     </div>
 
 </footer>
+
 
 </body>
 </html>
