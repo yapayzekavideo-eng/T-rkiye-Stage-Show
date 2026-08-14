@@ -234,7 +234,7 @@ main{
 .nominee{
     position:relative;
 
-    min-height:330px;
+    min-height:350px;
 
     border:1px solid #292929;
 
@@ -263,7 +263,7 @@ main{
 
 .nominee-image{
     width:100%;
-    height:220px;
+    height:235px;
 
     overflow:hidden;
 
@@ -292,7 +292,7 @@ main{
 }
 
 .nominee h3{
-    font-size:20px;
+    font-size:21px;
 }
 
 .nominee p{
@@ -541,11 +541,11 @@ footer{
     }
 
     .nominee{
-        min-height:330px;
+        min-height:350px;
     }
 
     .nominee-image{
-        height:230px;
+        height:240px;
     }
 
     .submit-area{
@@ -682,7 +682,7 @@ footer{
 
         <p>
             Yazın en unutulmaz şarkısını seç.
-            Adayını belirle ve oyunu gönder.
+            Favori adayını belirle ve oyunu gönder.
         </p>
 
     </div>
@@ -715,7 +715,7 @@ footer{
                 <div class="nominee-image">
 
                     <img
-                        src="images/manifest.jpg"
+                        src="https://raw.githubusercontent.com/yapayzekavideo-eng/T-rkiye-Stage-Show/8f499827301d037af93a037240b9aca43c432cb0/manifest.jpg"
                         alt="Manifest"
                     >
 
@@ -751,7 +751,7 @@ footer{
                 <div class="nominee-image">
 
                     <img
-                        src="images/aura (4).jpg"
+                        src="https://raw.githubusercontent.com/yapayzekavideo-eng/T-rkiye-Stage-Show/70a5d8cf93a16c8b5b898f3b7c1c740ba39cdbb5/aura%20(4).jpg"
                         alt="Aura"
                     >
 
@@ -787,7 +787,7 @@ footer{
                 <div class="nominee-image">
 
                     <img
-                        src="images/mantra.jpg"
+                        src="https://raw.githubusercontent.com/yapayzekavideo-eng/T-rkiye-Stage-Show/f981d616bcae4739c3f503c64cc11bf7c242f5f8/mantra.jpg"
                         alt="Mantra"
                     >
 
@@ -796,47 +796,11 @@ footer{
                 <div class="nominee-info">
 
                     <h3>
-                        Bi Kiss
+                        Kaldım Ellerinde
                     </h3>
 
                     <p>
                         MANTRA
-                    </p>
-
-                    <div class="select-button">
-                        SEÇ
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- KARM6 -->
-
-            <div class="nominee">
-
-                <div class="selected-check">
-                    ✓
-                </div>
-
-                <div class="nominee-image">
-
-                    <img
-                        src="images/karm6.jpg"
-                        alt="Karm6"
-                    >
-
-                </div>
-
-                <div class="nominee-info">
-
-                    <h3>
-                        İhtimal
-                    </h3>
-
-                    <p>
-                        KARM6
                     </p>
 
                     <div class="select-button">
@@ -859,7 +823,7 @@ footer{
                 <div class="nominee-image">
 
                     <img
-                        src="images/Radik5l (1).jpg"
+                        src="https://raw.githubusercontent.com/yapayzekavideo-eng/T-rkiye-Stage-Show/70a771d173f16eb25183cd53aa3e03003926dce2/Radik5l%20(1).jpg"
                         alt="Radik5l"
                     >
 
@@ -868,7 +832,7 @@ footer{
                 <div class="nominee-info">
 
                     <h3>
-                        Yaz Şarkısı
+                        Hayran
                     </h3>
 
                     <p>
@@ -895,7 +859,7 @@ footer{
                 <div class="nominee-image">
 
                     <img
-                        src="images/crush group photo.jpg"
+                        src="https://raw.githubusercontent.com/yapayzekavideo-eng/T-rkiye-Stage-Show/332eb6cf812144a676cbb32180dc77dc96b33b19/crush%20group%20photo.jpg"
                         alt="Crush"
                     >
 
@@ -904,11 +868,47 @@ footer{
                 <div class="nominee-info">
 
                     <h3>
-                        Yaz Şarkısı
+                        Crush!
                     </h3>
 
                     <p>
                         CRUSH
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KARM6 -->
+
+            <div class="nominee">
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="https://raw.githubusercontent.com/yapayzekavideo-eng/T-rkiye-Stage-Show/d33c3dc4433938ff0e81b310d7a38911cd6fc40a/karm6.jpg"
+                        alt="Karm6"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        İhtimal
+                    </h3>
+
+                    <p>
+                        KARM6
                     </p>
 
                     <div class="select-button">
@@ -1005,7 +1005,6 @@ footer{
 
 let selected = null;
 let selectedCategory = null;
-
 
 const nominees = document.querySelectorAll(".nominee");
 
@@ -1111,7 +1110,6 @@ async function sendVote(){
             item.classList.remove("selected");
 
         });
-
 
     }
 
