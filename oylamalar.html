@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -36,9 +37,11 @@ header{
     padding:0 5%;
     background:#050505;
     border-bottom:1px solid #29230f;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     position:sticky;
     top:0;
     z-index:1000;
@@ -135,35 +138,19 @@ main{
     line-height:1.6;
 }
 
-/* MOSAIC */
-
-.vote-mosaic{
-    display:grid;
-    grid-template-columns:repeat(12,1fr);
-    grid-auto-rows:85px;
-    gap:12px;
-}
+/* CATEGORY */
 
 .category{
     position:relative;
     overflow:hidden;
-    border:1px solid #302a16;
-    background:#0c0c0c;
-    padding:28px;
-    transition:.3s;
-}
 
-.category:hover{
-    border-color:#d4af37;
-    transform:translateY(-3px);
-}
+    border:1px solid #453919;
 
-.group{
-    grid-column:span 7;
-    grid-row:span 4;
+    padding:35px;
+
     background:
         radial-gradient(
-            circle at 75% 25%,
+            circle at 75% 20%,
             rgba(212,175,55,.28),
             transparent 30%
         ),
@@ -172,58 +159,24 @@ main{
             #211a08,
             #080808
         );
-}
 
-.song{
-    grid-column:span 5;
-    grid-row:span 4;
-    background:
-        linear-gradient(
-            145deg,
-            #30260d,
-            #080808
-        );
-}
-
-.summer{
-    grid-column:span 5;
-    grid-row:span 4;
-    background:
-        radial-gradient(
-            circle at 70% 25%,
-            rgba(230,195,70,.25),
-            transparent 32%
-        ),
-        linear-gradient(
-            145deg,
-            #251e0a,
-            #080808
-        );
-}
-
-.breakout{
-    grid-column:span 7;
-    grid-row:span 4;
-    background:
-        linear-gradient(
-            135deg,
-            #19150a,
-            #080808
-        );
+    min-height:280px;
 }
 
 .category-number{
     position:absolute;
     top:20px;
-    right:25px;
-    color:rgba(212,175,55,.2);
-    font-size:65px;
+    right:30px;
+
+    color:rgba(212,175,55,.18);
+
+    font-size:100px;
     font-weight:900;
 }
 
 .category-icon{
-    font-size:45px;
-    margin-bottom:35px;
+    font-size:48px;
+    margin-bottom:25px;
 }
 
 .category-label{
@@ -231,35 +184,22 @@ main{
     font-size:10px;
     font-weight:bold;
     letter-spacing:3px;
-    margin-bottom:9px;
+    margin-bottom:10px;
 }
 
 .category h2{
-    font-size:32px;
+    font-size:40px;
     line-height:1;
 }
 
 .category p{
     color:#888;
-    margin-top:12px;
+    max-width:550px;
+
+    margin-top:14px;
+
     font-size:13px;
     line-height:1.5;
-}
-
-.open-category{
-    display:inline-block;
-    margin-top:20px;
-    border:1px solid #d4af37;
-    color:#d4af37;
-    padding:10px 17px;
-    font-size:11px;
-    font-weight:bold;
-    transition:.2s;
-}
-
-.open-category:hover{
-    background:#d4af37;
-    color:#050505;
 }
 
 /* VOTING AREA */
@@ -270,9 +210,11 @@ main{
 
 .section-label{
     color:#d4af37;
+
     font-size:11px;
     font-weight:bold;
     letter-spacing:3px;
+
     margin-bottom:10px;
 }
 
@@ -285,22 +227,23 @@ main{
 
 .nominees{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
 }
 
 .nominee{
     position:relative;
-    min-height:230px;
+
+    min-height:330px;
+
     border:1px solid #292929;
-    background:
-        linear-gradient(
-            145deg,
-            #17130a,
-            #080808
-        );
-    padding:22px;
+
+    background:#0b0b0b;
+
     cursor:pointer;
+
+    overflow:hidden;
+
     transition:.25s;
 }
 
@@ -311,68 +254,135 @@ main{
 
 .nominee.selected{
     border:2px solid #d4af37;
+
     box-shadow:
-        0 0 25px rgba(212,175,55,.14);
+        0 0 30px rgba(212,175,55,.16);
 }
 
+/* IMAGE */
+
 .nominee-image{
-    height:125px;
-    margin:-22px -22px 20px;
-    background:
-        linear-gradient(
-            135deg,
-            #493a13,
-            #090909
-        );
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:rgba(255,255,255,.12);
-    font-size:45px;
-    font-weight:900;
+    width:100%;
+    height:220px;
+
+    overflow:hidden;
+
+    background:#111;
+}
+
+.nominee-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.4s;
+}
+
+.nominee:hover .nominee-image img{
+    transform:scale(1.05);
+}
+
+/* INFO */
+
+.nominee-info{
+    padding:18px 20px 20px;
 }
 
 .nominee h3{
-    font-size:19px;
+    font-size:20px;
 }
 
 .nominee p{
     color:#777;
-    font-size:12px;
+
+    font-size:11px;
+
     margin-top:6px;
+
+    letter-spacing:1px;
 }
 
 .select-button{
-    margin-top:15px;
     display:inline-block;
+
+    margin-top:13px;
+
     border:1px solid #555;
+
     color:#aaa;
-    padding:8px 13px;
+
+    padding:8px 14px;
+
     font-size:10px;
+
     font-weight:bold;
+
+    transition:.2s;
 }
 
 .nominee.selected .select-button{
     background:#d4af37;
+
     border-color:#d4af37;
+
     color:#050505;
+}
+
+/* CHECK */
+
+.selected-check{
+    position:absolute;
+
+    top:14px;
+    right:14px;
+
+    width:34px;
+    height:34px;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#d4af37;
+    color:#050505;
+
+    font-size:18px;
+    font-weight:bold;
+
+    z-index:5;
+}
+
+.nominee.selected .selected-check{
+    display:flex;
 }
 
 /* SEND VOTE */
 
 .submit-area{
     margin-top:30px;
+
     padding:35px;
+
     border:1px solid #453919;
+
     background:
         linear-gradient(
             100deg,
             #171207,
             #090909
         );
+
     display:flex;
+
     align-items:center;
     justify-content:space-between;
+
     gap:25px;
 }
 
@@ -382,12 +392,15 @@ main{
 
 .submit-area p{
     color:#777;
+
     font-size:13px;
+
     margin-top:8px;
 }
 
 .submit-button{
     border:none;
+
     background:
         linear-gradient(
             90deg,
@@ -395,11 +408,17 @@ main{
             #d4af37,
             #f0d56a
         );
+
     color:#050505;
+
     padding:16px 30px;
+
     font-size:12px;
+
     font-weight:bold;
+
     cursor:pointer;
+
     border-radius:3px;
 }
 
@@ -407,37 +426,49 @@ main{
 
 footer{
     border-top:1px solid #29230f;
+
     padding:45px 5%;
+
     background:#030303;
 }
 
 .footer-inner{
     max-width:1350px;
+
     margin:auto;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 }
 
 .footer-logo{
     color:#d4af37;
+
     font-size:30px;
+
     font-weight:900;
 }
 
 .footer-text{
     color:#666;
+
     font-size:12px;
+
     margin-top:8px;
 }
 
 .footer-links{
     display:flex;
+
     gap:20px;
 }
 
 .footer-links a{
     color:#777;
+
     font-size:11px;
 }
 
@@ -451,14 +482,19 @@ footer{
 
     header{
         height:auto;
+
         padding:17px 5%;
+
         flex-wrap:wrap;
+
         gap:15px;
     }
 
     nav{
         order:3;
+
         width:100%;
+
         overflow-x:auto;
     }
 
@@ -470,23 +506,10 @@ footer{
         display:none;
     }
 
-    .vote-mosaic{
-        grid-template-columns:repeat(6,1fr);
-    }
-
-    .group,
-    .breakout{
-        grid-column:span 6;
-    }
-
-    .song,
-    .summer{
-        grid-column:span 3;
-    }
-
     .nominees{
         grid-template-columns:repeat(2,1fr);
     }
+
 }
 
 /* MOBILE */
@@ -495,6 +518,7 @@ footer{
 
     main{
         width:94%;
+
         margin-top:28px;
     }
 
@@ -502,13 +526,14 @@ footer{
         font-size:48px;
     }
 
-    .vote-mosaic{
-        display:flex;
-        flex-direction:column;
+    .category{
+        min-height:280px;
+
+        padding:25px;
     }
 
-    .category{
-        min-height:300px;
+    .category h2{
+        font-size:32px;
     }
 
     .nominees{
@@ -516,11 +541,16 @@ footer{
     }
 
     .nominee{
-        min-height:270px;
+        min-height:330px;
+    }
+
+    .nominee-image{
+        height:230px;
     }
 
     .submit-area{
         flex-direction:column;
+
         align-items:flex-start;
     }
 
@@ -530,7 +560,9 @@ footer{
 
     .footer-inner{
         flex-direction:column;
+
         align-items:flex-start;
+
         gap:25px;
     }
 
@@ -543,7 +575,11 @@ footer{
 </style>
 </head>
 
+
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -563,19 +599,31 @@ footer{
 
     </div>
 
+
     <nav>
 
-        <a href="index.html">ANA SAYFA</a>
+        <a href="index.html">
+            ANA SAYFA
+        </a>
 
-        <a href="index.html#haberler">HABERLER</a>
+        <a href="haberler.html">
+            HABERLER
+        </a>
 
-        <a href="index.html#sanatcilar">SANATÇILAR</a>
+        <a href="sanatcilar.html">
+            SANATÇILAR
+        </a>
 
-        <a href="oylamalar.html">OYLAMALAR</a>
+        <a href="oylamalar.html">
+            OYLAMALAR
+        </a>
 
-        <a href="index.html#oduller">ÖDÜLLER</a>
+        <a href="oduller.html">
+            ÖDÜLLER
+        </a>
 
     </nav>
+
 
     <a href="index.html" class="home-button">
         ← ANA SAYFA
@@ -584,7 +632,12 @@ footer{
 </header>
 
 
+<!-- MAIN -->
+
 <main>
+
+
+    <!-- PAGE TITLE -->
 
     <div class="page-title">
 
@@ -598,336 +651,311 @@ footer{
         </h1>
 
         <p>
-            2026'nın en iyilerini sen belirle.
-            Kategoriyi seç, favori adayını belirle
-            ve TSS Awards tarihinin bir parçası ol.
+            2026'nın en unutulmaz yaz şarkısını
+            sen belirle. Favori adayını seç ve
+            TSS Awards oylamasına katıl.
         </p>
 
     </div>
 
 
-    <div class="vote-mosaic">
+    <!-- ACTIVE CATEGORY -->
 
-        <article class="category group">
+    <div class="category">
 
-            <div class="category-number">01</div>
+        <div class="category-number">
+            01
+        </div>
 
-            <div class="category-icon">🏆</div>
+        <div class="category-icon">
+            ☀️
+        </div>
 
-            <div class="category-label">
-                ANA ÖDÜL
-            </div>
+        <div class="category-label">
+            AKTİF OYLAMA • YAZ 2026
+        </div>
 
-            <h2>
-                YILIN<br>
-                GRUBU
-            </h2>
+        <h2>
+            YILIN<br>
+            YAZ ŞARKISI
+        </h2>
 
-            <p>
-                2026 yılında müzik dünyasında
-                en büyük etkiyi yaratan grubu seç.
-            </p>
-
-            <a href="#yilin-grubu" class="open-category">
-                ADAYLARI GÖR →
-            </a>
-
-        </article>
-
-
-        <article class="category song">
-
-            <div class="category-number">02</div>
-
-            <div class="category-icon">🎵</div>
-
-            <div class="category-label">
-                MÜZİK
-            </div>
-
-            <h2>
-                YILIN<br>
-                ŞARKISI
-            </h2>
-
-            <p>
-                2026'nın en iyi şarkısını belirle.
-            </p>
-
-            <a href="#yilin-sarkisi" class="open-category">
-                ADAYLARI GÖR →
-            </a>
-
-        </article>
-
-
-        <article class="category summer">
-
-            <div class="category-number">03</div>
-
-            <div class="category-icon">☀️</div>
-
-            <div class="category-label">
-                YAZ 2026
-            </div>
-
-            <h2>
-                YILIN<br>
-                YAZ ŞARKISI
-            </h2>
-
-            <p>
-                Yazın en unutulmaz şarkısını seç.
-            </p>
-
-            <a href="#yazin-sarkisi" class="open-category">
-                ADAYLARI GÖR →
-            </a>
-
-        </article>
-
-
-        <article class="category breakout">
-
-            <div class="category-number">04</div>
-
-            <div class="category-icon">⭐</div>
-
-            <div class="category-label">
-                YÜKSELEN
-            </div>
-
-            <h2>
-                YILIN<br>
-                ÇIKIŞI
-            </h2>
-
-            <p>
-                2026'da dikkatleri üzerine çeken
-                en güçlü yeni çıkışı seç.
-            </p>
-
-            <a href="#yilin-cikisi" class="open-category">
-                ADAYLARI GÖR →
-            </a>
-
-        </article>
+        <p>
+            Yazın en unutulmaz şarkısını seç.
+            Adayını belirle ve oyunu gönder.
+        </p>
 
     </div>
 
 
-    <!-- YILIN GRUBU -->
-
-    <section class="voting-area" id="yilin-grubu">
-
-        <div class="section-label">
-            01 • YILIN GRUBU
-        </div>
-
-        <h2 class="section-title">
-            Favori grubunu seç.
-        </h2>
-
-        <div class="nominees">
-
-            <div class="nominee">
-                <div class="nominee-image">M</div>
-                <h3>MANIFEST</h3>
-                <p>6 ÜYE</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">A</div>
-                <h3>AURA</h3>
-                <p>4 ÜYE</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">M</div>
-                <h3>MANTRA</h3>
-                <p>5 ÜYE</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">R</div>
-                <h3>RADİKAL</h3>
-                <p>GRUP</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- YILIN ŞARKISI -->
-
-    <section class="voting-area" id="yilin-sarkisi">
-
-        <div class="section-label">
-            02 • YILIN ŞARKISI
-        </div>
-
-        <h2 class="section-title">
-            Yılın şarkısını seç.
-        </h2>
-
-        <div class="nominees">
-
-            <div class="nominee">
-                <div class="nominee-image">♪</div>
-                <h3>Toz Pembe</h3>
-                <p>MANIFEST</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">♪</div>
-                <h3>Yuh</h3>
-                <p>AURA</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">♪</div>
-                <h3>Bi Kiss</h3>
-                <p>MANTRA</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">♪</div>
-                <h3>Hayran</h3>
-                <p>RADİKAL</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- YAZ ŞARKISI -->
+    <!-- VOTING -->
 
     <section class="voting-area" id="yazin-sarkisi">
 
         <div class="section-label">
-            03 • YILIN YAZ ŞARKISI
+            01 • YILIN YAZ ŞARKISI
         </div>
 
         <h2 class="section-title">
             Yazın hitini seç.
         </h2>
 
+
         <div class="nominees">
 
-            <div class="nominee">
-                <div class="nominee-image">☀</div>
-                <h3>Toz Pembe</h3>
-                <p>MANIFEST</p>
-                <div class="select-button">SEÇ</div>
-            </div>
+
+            <!-- MANIFEST -->
 
             <div class="nominee">
-                <div class="nominee-image">☀</div>
-                <h3>Yuh</h3>
-                <p>AURA</p>
-                <div class="select-button">SEÇ</div>
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="images/manifest.jpg"
+                        alt="Manifest"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        Toz Pembe
+                    </h3>
+
+                    <p>
+                        MANIFEST
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="nominee">
-                <div class="nominee-image">☀</div>
-                <h3>Bi Kiss</h3>
-                <p>MANTRA</p>
-                <div class="select-button">SEÇ</div>
-            </div>
+
+            <!-- AURA -->
 
             <div class="nominee">
-                <div class="nominee-image">☀</div>
-                <h3>İhtimal</h3>
-                <p>KARMA</p>
-                <div class="select-button">SEÇ</div>
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="images/aura (4).jpg"
+                        alt="Aura"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        Yuh
+                    </h3>
+
+                    <p>
+                        AURA
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
             </div>
+
+
+            <!-- MANTRA -->
+
+            <div class="nominee">
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="images/mantra.jpg"
+                        alt="Mantra"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        Bi Kiss
+                    </h3>
+
+                    <p>
+                        MANTRA
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- KARM6 -->
+
+            <div class="nominee">
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="images/karm6.jpg"
+                        alt="Karm6"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        İhtimal
+                    </h3>
+
+                    <p>
+                        KARM6
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RADİK5L -->
+
+            <div class="nominee">
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="images/Radik5l (1).jpg"
+                        alt="Radik5l"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        Yaz Şarkısı
+                    </h3>
+
+                    <p>
+                        RADİK5L
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CRUSH -->
+
+            <div class="nominee">
+
+                <div class="selected-check">
+                    ✓
+                </div>
+
+                <div class="nominee-image">
+
+                    <img
+                        src="images/crush group photo.jpg"
+                        alt="Crush"
+                    >
+
+                </div>
+
+                <div class="nominee-info">
+
+                    <h3>
+                        Yaz Şarkısı
+                    </h3>
+
+                    <p>
+                        CRUSH
+                    </p>
+
+                    <div class="select-button">
+                        SEÇ
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- SEND -->
+
+        <div class="submit-area">
+
+            <div>
+
+                <h2>
+                    Hazırsan oyunu kullan.
+                </h2>
+
+                <p>
+                    Favori adayını seçtikten sonra
+                    oyunu gönderebilirsin.
+                </p>
+
+            </div>
+
+
+            <button
+                class="submit-button"
+                onclick="sendVote()"
+            >
+                🗳 OYUMU GÖNDER
+            </button>
 
         </div>
 
     </section>
-
-
-    <!-- YILIN ÇIKIŞI -->
-
-    <section class="voting-area" id="yilin-cikisi">
-
-        <div class="section-label">
-            04 • YILIN ÇIKIŞI
-        </div>
-
-        <h2 class="section-title">
-            En güçlü çıkışı seç.
-        </h2>
-
-        <div class="nominees">
-
-            <div class="nominee">
-                <div class="nominee-image">★</div>
-                <h3>MANIFEST</h3>
-                <p>GRUP</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">★</div>
-                <h3>AURA</h3>
-                <p>GRUP</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">★</div>
-                <h3>RADİKAL</h3>
-                <p>GRUP</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-            <div class="nominee">
-                <div class="nominee-image">★</div>
-                <h3>CRUSH!</h3>
-                <p>GRUP</p>
-                <div class="select-button">SEÇ</div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- GÖNDER -->
-
-    <div class="submit-area">
-
-        <div>
-
-            <h2>
-                Hazırsan oyununu kullan.
-            </h2>
-
-            <p>
-                Adayını seçtikten sonra oyunu gönderebilirsin.
-            </p>
-
-        </div>
-
-        <button class="submit-button" onclick="sendVote()">
-            🗳 OYUMU GÖNDER
-        </button>
-
-    </div>
 
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -945,15 +973,24 @@ footer{
 
         </div>
 
+
         <div class="footer-links">
 
-            <a href="index.html">ANA SAYFA</a>
+            <a href="index.html">
+                ANA SAYFA
+            </a>
 
-            <a href="oylamalar.html">OYLAMALAR</a>
+            <a href="oylamalar.html">
+                OYLAMALAR
+            </a>
 
-            <a href="index.html#sanatcilar">SANATÇILAR</a>
+            <a href="sanatcilar.html">
+                SANATÇILAR
+            </a>
 
-            <a href="index.html#oduller">ÖDÜLLER</a>
+            <a href="oduller.html">
+                ÖDÜLLER
+            </a>
 
         </div>
 
@@ -969,6 +1006,7 @@ footer{
 let selected = null;
 let selectedCategory = null;
 
+
 const nominees = document.querySelectorAll(".nominee");
 
 
@@ -976,19 +1014,15 @@ nominees.forEach(function(nominee){
 
     nominee.addEventListener("click", function(){
 
-        /* Önce bütün seçimleri kaldır */
-
         nominees.forEach(function(item){
+
             item.classList.remove("selected");
+
         });
 
 
-        /* Tıklananı seç */
-
         nominee.classList.add("selected");
 
-
-        /* Aday adı */
 
         selected = nominee
             .querySelector("h3")
@@ -996,35 +1030,7 @@ nominees.forEach(function(nominee){
             .trim();
 
 
-        /* Hangi kategori olduğunu bul */
-
-        const section = nominee.closest(".voting-area");
-
-        const label = section
-            .querySelector(".section-label")
-            .innerText;
-
-
-        if(label.includes("01")){
-
-            selectedCategory = "Yılın Grubu";
-
-        }
-        else if(label.includes("02")){
-
-            selectedCategory = "Yılın Şarkısı";
-
-        }
-        else if(label.includes("03")){
-
-            selectedCategory = "Yılın Yaz Şarkısı";
-
-        }
-        else if(label.includes("04")){
-
-            selectedCategory = "Yılın Çıkışı";
-
-        }
+        selectedCategory = "Yılın Yaz Şarkısı";
 
     });
 
@@ -1035,11 +1041,11 @@ nominees.forEach(function(nominee){
 
 async function sendVote(){
 
-    /* Aday seçilmiş mi? */
-
     if(!selected){
 
-        alert("Lütfen önce bir aday seç!");
+        alert(
+            "Lütfen önce bir aday seç!"
+        );
 
         return;
     }
@@ -1073,11 +1079,10 @@ async function sendVote(){
         );
 
 
-        /* Supabase hata verdiyse */
-
         if(!response.ok){
 
-            const errorText = await response.text();
+            const errorText =
+                await response.text();
 
             console.log(errorText);
 
@@ -1090,16 +1095,12 @@ async function sendVote(){
         }
 
 
-        /* BAŞARILI */
-
         alert(
             "Oyun başarıyla kaydedildi! 🎉\n\n" +
             "Seçimin: " +
             selected
         );
 
-
-        /* Seçimi temizle */
 
         selected = null;
         selectedCategory = null;
@@ -1113,6 +1114,7 @@ async function sendVote(){
 
 
     }
+
     catch(error){
 
         console.error(error);
@@ -1127,5 +1129,7 @@ async function sendVote(){
 
 </script>
 
+
 </body>
 </html>
+```
