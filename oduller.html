@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -101,7 +102,6 @@ nav a:hover{
 
 .home-button{
     border:1px solid #d4af37;
-
     color:#d4af37;
 
     padding:11px 20px;
@@ -376,7 +376,7 @@ main{
 
 
 /* =========================
-   WINNER AREA
+   STATUS / WINNER AREA
 ========================= */
 
 .winner-box{
@@ -451,6 +451,65 @@ main{
     font-weight:bold;
 
     letter-spacing:1px;
+
+    white-space:nowrap;
+}
+
+
+/* =========================
+   AKTİF OYLAMA
+========================= */
+
+.award-card.active{
+    border-color:#5a4818;
+
+    background:
+        linear-gradient(
+            145deg,
+            #211906,
+            #080808
+        );
+}
+
+.award-card.active .status-icon{
+    border-color:#d4af37;
+
+    background:rgba(212,175,55,.08);
+}
+
+.award-card.active .status-text strong{
+    color:#d4af37;
+}
+
+.award-card.active .status-badge{
+    border-color:#d4af37;
+
+    color:#d4af37;
+}
+
+
+/* =========================
+   HENÜZ BAŞLAMADI
+========================= */
+
+.award-card.pending{
+    opacity:.9;
+}
+
+.award-card.pending .status-icon{
+    color:#777;
+
+    border-color:#333;
+}
+
+.award-card.pending .status-text strong{
+    color:#777;
+}
+
+.award-card.pending .status-badge{
+    color:#666;
+
+    border-color:#333;
 }
 
 
@@ -727,9 +786,7 @@ footer{
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -787,9 +844,7 @@ footer{
 
 
 
-<!-- =========================
-     MAIN
-========================= -->
+<!-- MAIN -->
 
 <main>
 
@@ -846,9 +901,11 @@ footer{
     <section class="awards-grid">
 
 
-        <!-- 01 -->
+        <!-- =========================
+             01 YILIN GRUBU
+        ========================= -->
 
-        <article class="award-card">
+        <article class="award-card pending">
 
             <div class="award-number">
                 01
@@ -883,11 +940,11 @@ footer{
                     <div class="status-text">
 
                         <small>
-                            KAZANAN
+                            DURUM
                         </small>
 
                         <strong>
-                            Henüz açıklanmadı
+                            Oylama henüz başlamadı
                         </strong>
 
                     </div>
@@ -896,7 +953,7 @@ footer{
 
 
                 <div class="status-badge">
-                    OYLAMA DEVAM EDİYOR
+                    HENÜZ BAŞLAMADI
                 </div>
 
             </div>
@@ -905,9 +962,11 @@ footer{
 
 
 
-        <!-- 02 -->
+        <!-- =========================
+             02 YILIN ŞARKISI
+        ========================= -->
 
-        <article class="award-card">
+        <article class="award-card pending">
 
             <div class="award-number">
                 02
@@ -942,11 +1001,11 @@ footer{
                     <div class="status-text">
 
                         <small>
-                            KAZANAN
+                            DURUM
                         </small>
 
                         <strong>
-                            Henüz açıklanmadı
+                            Oylama henüz başlamadı
                         </strong>
 
                     </div>
@@ -955,7 +1014,7 @@ footer{
 
 
                 <div class="status-badge">
-                    OYLAMA DEVAM EDİYOR
+                    HENÜZ BAŞLAMADI
                 </div>
 
             </div>
@@ -964,9 +1023,11 @@ footer{
 
 
 
-        <!-- 03 -->
+        <!-- =========================
+             03 YILIN YAZ ŞARKISI
+        ========================= -->
 
-        <article class="award-card">
+        <article class="award-card active">
 
             <div class="award-number">
                 03
@@ -1001,11 +1062,11 @@ footer{
                     <div class="status-text">
 
                         <small>
-                            KAZANAN
+                            DURUM
                         </small>
 
                         <strong>
-                            Henüz açıklanmadı
+                            Oylama devam ediyor
                         </strong>
 
                     </div>
@@ -1023,9 +1084,11 @@ footer{
 
 
 
-        <!-- 04 -->
+        <!-- =========================
+             04 YILIN ÇIKIŞI
+        ========================= -->
 
-        <article class="award-card">
+        <article class="award-card pending">
 
             <div class="award-number">
                 04
@@ -1060,11 +1123,11 @@ footer{
                     <div class="status-text">
 
                         <small>
-                            KAZANAN
+                            DURUM
                         </small>
 
                         <strong>
-                            Henüz açıklanmadı
+                            Oylama henüz başlamadı
                         </strong>
 
                     </div>
@@ -1073,7 +1136,7 @@ footer{
 
 
                 <div class="status-badge">
-                    OYLAMA DEVAM EDİYOR
+                    HENÜZ BAŞLAMADI
                 </div>
 
             </div>
@@ -1096,10 +1159,10 @@ footer{
             </h2>
 
             <p>
-                TSS Awards 2026 kategorilerinde
-                favori adayına oy ver. Oylama
-                sonuçları tamamlandığında kazananlar
-                bu sayfada açıklanacak.
+                Şu anda yalnızca Yılın Yaz Şarkısı
+                kategorisi için oylama açık.
+                Diğer kategoriler ilerleyen dönemde
+                kullanıma açılacaktır.
             </p>
 
         </div>
@@ -1116,9 +1179,7 @@ footer{
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
@@ -1172,4 +1233,5 @@ footer{
 
 </body>
 
-  </html>
+</html>
+```
