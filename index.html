@@ -1,6 +1,6 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,11 +30,10 @@ a{
     color:inherit;
 }
 
-
 /* HEADER */
 
 header{
-    min-height:76px;
+    height:76px;
     padding:0 5%;
     background:#050505;
     border-bottom:1px solid #29230f;
@@ -81,9 +80,9 @@ nav{
 }
 
 nav a{
-    color:#ddd;
     font-size:12px;
     font-weight:bold;
+    color:#ddd;
     transition:.2s;
 }
 
@@ -98,14 +97,7 @@ nav a:hover{
     border-radius:4px;
     font-weight:bold;
     font-size:12px;
-    transition:.2s;
 }
-
-.vote-top:hover{
-    background:#d4af37;
-    color:#050505;
-}
-
 
 /* MAIN */
 
@@ -114,7 +106,6 @@ main{
     max-width:1350px;
     margin:35px auto 80px;
 }
-
 
 /* INTRO */
 
@@ -147,7 +138,6 @@ main{
     line-height:1.6;
 }
 
-
 /* MOSAIC */
 
 .mosaic{
@@ -157,8 +147,7 @@ main{
     gap:12px;
 }
 
-
-/* CARD */
+/* GENERAL CARD */
 
 .card{
     position:relative;
@@ -213,7 +202,6 @@ main{
     line-height:1.5;
 }
 
-
 /* HERO */
 
 .hero-card{
@@ -235,17 +223,14 @@ main{
 
 .hero-card:after{
     content:"TSS";
-
     position:absolute;
     right:-30px;
     bottom:-80px;
 
     font-size:250px;
     font-weight:900;
-
     color:rgba(212,175,55,.035);
 }
-
 
 /* NEWS */
 
@@ -284,7 +269,6 @@ main{
             #090909
         );
 }
-
 
 /* VOTE */
 
@@ -325,12 +309,11 @@ main{
     border-radius:3px;
 }
 
-
 /* ARTISTS */
 
 .artists-card{
     grid-column:span 8;
-    grid-row:span 3;
+    grid-row:span 4;
 
     background:#0b0b0b;
 }
@@ -340,42 +323,66 @@ main{
     inset:0;
 
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(5,1fr);
 }
 
 .artist-mini{
     position:relative;
-    border-right:1px solid #282313;
     overflow:hidden;
+
+    border-right:1px solid #282313;
+
+    background:#111;
 }
 
 .artist-mini:last-child{
     border-right:none;
 }
 
-.artist-mini:nth-child(1){
-    background:linear-gradient(145deg,#514316,#080808);
+.artist-mini img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
 }
 
-.artist-mini:nth-child(2){
-    background:linear-gradient(145deg,#3f3515,#080808);
+.artist-mini:hover img{
+    transform:scale(1.08);
 }
 
-.artist-mini:nth-child(3){
-    background:linear-gradient(145deg,#66551c,#080808);
+.artist-mini:after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            transparent 40%,
+            rgba(0,0,0,.9)
+        );
 }
 
 .artist-mini span{
     position:absolute;
-    left:15px;
+    z-index:2;
+
+    left:12px;
     bottom:15px;
 
-    font-size:16px;
+    font-size:13px;
     font-weight:900;
+
+    text-shadow:0 2px 8px #000;
 }
 
 .artists-overlay{
     position:absolute;
+    z-index:3;
+
     inset:0;
 
     padding:22px;
@@ -388,7 +395,7 @@ main{
         linear-gradient(
             rgba(0,0,0,.25),
             transparent 45%,
-            rgba(0,0,0,.5)
+            rgba(0,0,0,.35)
         );
 }
 
@@ -396,12 +403,11 @@ main{
     font-size:28px;
 }
 
-.artists-overlay span{
+.artists-overlay a{
     color:#d4af37;
     font-size:11px;
     font-weight:bold;
 }
-
 
 /* AWARDS */
 
@@ -423,7 +429,6 @@ main{
     margin-bottom:auto;
 }
 
-
 /* BIG NEWS */
 
 .big-news{
@@ -437,7 +442,6 @@ main{
             #090909
         );
 }
-
 
 /* SMALL NEWS */
 
@@ -453,8 +457,7 @@ main{
         );
 }
 
-
-/* BOTTOM */
+/* BOTTOM CTA */
 
 .bottom-card{
     grid-column:span 12;
@@ -490,10 +493,7 @@ main{
 
     font-weight:bold;
     font-size:13px;
-
-    border-radius:3px;
 }
-
 
 /* FOOTER */
 
@@ -537,7 +537,6 @@ footer{
 .footer-links a:hover{
     color:#d4af37;
 }
-
 
 /* TABLET */
 
@@ -612,7 +611,6 @@ footer{
 
 }
 
-
 /* MOBILE */
 
 @media(max-width:600px){
@@ -655,13 +653,34 @@ footer{
         min-height:330px;
     }
 
+    .artist-mini-grid{
+        grid-template-columns:repeat(5,1fr);
+    }
+
+    .artist-mini span{
+        font-size:10px;
+        left:7px;
+        bottom:12px;
+    }
+
+    .artists-overlay{
+        padding:16px;
+    }
+
+    .artists-overlay h2{
+        font-size:23px;
+    }
+
+    .artists-overlay a{
+        font-size:9px;
+    }
+
     .bottom-card{
         min-height:230px;
 
         flex-direction:column;
         align-items:flex-start;
         justify-content:center;
-
         gap:25px;
     }
 
@@ -682,22 +701,15 @@ footer{
 }
 
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- HEADER -->
 
 <header>
 
     <div class="logo">
 
-        <div class="logo-main">
-            TSS
-        </div>
+        <div class="logo-main">TSS</div>
 
         <div class="logo-line"></div>
 
@@ -709,35 +721,21 @@ footer{
 
     </div>
 
-
     <nav>
 
-        <a href="index.html">
-            ANA SAYFA
-        </a>
+        <a href="index.html">ANA SAYFA</a>
 
-        <a href="haberler.html">
-            HABERLER
-        </a>
+        <a href="#haberler">HABERLER</a>
 
-        <a href="sanatcilar.html">
-            SANATÇILAR
-        </a>
+        <a href="#sanatcilar">SANATÇILAR</a>
 
-        <a href="oylamalar.html">
-            OYLAMALAR
-        </a>
+        <a href="oylamalar.html">OYLAMALAR</a>
 
-        <a href="oduller.html">
-            ÖDÜLLER
-        </a>
+        <a href="#oduller">ÖDÜLLER</a>
 
-        <a href="#hakkimizda">
-            HAKKIMIZDA
-        </a>
+        <a href="#hakkimizda">HAKKIMIZDA</a>
 
     </nav>
-
 
     <a href="oylamalar.html" class="vote-top">
         🗳 OY VER
@@ -746,13 +744,7 @@ footer{
 </header>
 
 
-
-<!-- MAIN -->
-
 <main>
-
-
-    <!-- INTRO -->
 
     <div class="intro">
 
@@ -774,10 +766,7 @@ footer{
     </div>
 
 
-
-    <!-- MOSAIC -->
-
-    <div class="mosaic">
+    <div class="mosaic" id="haberler">
 
 
         <!-- HERO -->
@@ -805,10 +794,9 @@ footer{
         </article>
 
 
-
         <!-- NEWS 1 -->
 
-        <a href="haberler.html" class="card news-one">
+        <article class="card news-one">
 
             <div class="card-content">
 
@@ -827,8 +815,7 @@ footer{
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- VOTE -->
@@ -862,10 +849,9 @@ footer{
         </article>
 
 
-
         <!-- NEWS 2 -->
 
-        <a href="haberler.html" class="card news-two">
+        <article class="card news-two">
 
             <div class="card-content">
 
@@ -883,13 +869,12 @@ footer{
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- NEWS 3 -->
 
-        <a href="haberler.html" class="card news-three">
+        <article class="card news-three">
 
             <div class="card-content">
 
@@ -904,29 +889,86 @@ footer{
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- ARTISTS -->
 
-        <a href="sanatcilar.html" class="card artists-card">
+        <article class="card artists-card" id="sanatcilar">
 
             <div class="artist-mini-grid">
 
                 <div class="artist-mini">
-                    <span>MANIFEST</span>
+
+                    <img
+                        src="images/manifest.jpg"
+                        alt="Manifest"
+                    >
+
+                    <span>
+                        MANIFEST
+                    </span>
+
                 </div>
 
-                <div class="artist-mini">
-                    <span>AURA</span>
-                </div>
 
                 <div class="artist-mini">
-                    <span>MANTRA</span>
+
+                    <img
+                        src="images/aura (4).jpg"
+                        alt="Aura"
+                    >
+
+                    <span>
+                        AURA
+                    </span>
+
+                </div>
+
+
+                <div class="artist-mini">
+
+                    <img
+                        src="images/mantra.jpg"
+                        alt="Mantra"
+                    >
+
+                    <span>
+                        MANTRA
+                    </span>
+
+                </div>
+
+
+                <div class="artist-mini">
+
+                    <img
+                        src="images/karm6.jpg"
+                        alt="Karma"
+                    >
+
+                    <span>
+                        KARMA
+                    </span>
+
+                </div>
+
+
+                <div class="artist-mini">
+
+                    <img
+                        src="images/Radik5l (1).jpg"
+                        alt="Radikal"
+                    >
+
+                    <span>
+                        RADİKAL
+                    </span>
+
                 </div>
 
             </div>
+
 
             <div class="artists-overlay">
 
@@ -934,19 +976,18 @@ footer{
                     SANATÇILAR
                 </h2>
 
-                <span>
+                <a href="sanatcilar.html">
                     TÜMÜNÜ GÖR →
-                </span>
+                </a>
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- AWARDS -->
 
-        <a href="oduller.html" class="card awards-card">
+        <article class="card awards-card" id="oduller">
 
             <div class="card-content">
 
@@ -969,13 +1010,12 @@ footer{
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- BIG NEWS -->
 
-        <a href="haberler.html" class="card big-news">
+        <article class="card big-news">
 
             <div class="card-content">
 
@@ -995,13 +1035,12 @@ footer{
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- SMALL NEWS -->
 
-        <a href="haberler.html" class="card small-news">
+        <article class="card small-news">
 
             <div class="card-content">
 
@@ -1016,8 +1055,7 @@ footer{
 
             </div>
 
-        </a>
-
+        </article>
 
 
         <!-- BOTTOM -->
@@ -1048,13 +1086,9 @@ footer{
 </main>
 
 
-
-<!-- FOOTER -->
-
 <footer id="hakkimizda">
 
     <div class="footer-inner">
-
 
         <div>
 
@@ -1076,19 +1110,15 @@ footer{
                 ANA SAYFA
             </a>
 
-            <a href="haberler.html">
-                HABERLER
+            <a href="oylamalar.html">
+                OYLAMALAR
             </a>
 
             <a href="sanatcilar.html">
                 SANATÇILAR
             </a>
 
-            <a href="oylamalar.html">
-                OYLAMALAR
-            </a>
-
-            <a href="oduller.html">
+            <a href="#oduller">
                 ÖDÜLLER
             </a>
 
@@ -1098,7 +1128,6 @@ footer{
 
 </footer>
 
-
 </body>
-
 </html>
+```
