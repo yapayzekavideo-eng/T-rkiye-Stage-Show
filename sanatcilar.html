@@ -1,11 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>TSS Sanatçılar | Türkiye Stage Show</title>
+<title>TSS | Sanatçılar</title>
 
 <style>
 
@@ -30,15 +30,11 @@ a{
     text-decoration:none;
 }
 
-
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     height:76px;
     padding:0 5%;
-
     background:#050505;
     border-bottom:1px solid #29230f;
 
@@ -94,52 +90,40 @@ nav a:hover{
     color:#d4af37;
 }
 
-.home-button{
+.vote-button{
     border:1px solid #d4af37;
     color:#d4af37;
     padding:11px 20px;
     border-radius:4px;
     font-size:12px;
     font-weight:bold;
-    transition:.2s;
 }
 
-.home-button:hover{
-    background:#d4af37;
-    color:#050505;
-}
-
-
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 
 main{
     width:92%;
     max-width:1350px;
-    margin:45px auto 90px;
+    margin:45px auto 80px;
 }
 
-
-/* =========================
-   TITLE
-========================= */
+/* TITLE */
 
 .page-title{
-    margin-bottom:45px;
+    margin-bottom:40px;
 }
 
 .page-title small{
     color:#d4af37;
-    letter-spacing:4px;
     font-size:11px;
     font-weight:bold;
+    letter-spacing:4px;
 }
 
 .page-title h1{
-    font-size:clamp(48px,7vw,80px);
-    letter-spacing:-4px;
+    font-size:clamp(50px,7vw,85px);
     line-height:.9;
+    letter-spacing:-4px;
     margin-top:10px;
 }
 
@@ -150,139 +134,111 @@ main{
 .page-title p{
     color:#888;
     max-width:650px;
-    margin-top:20px;
+    margin-top:18px;
     line-height:1.6;
 }
 
+/* ARTIST GRID */
 
-/* =========================
-   SECTION
-========================= */
-
-.section-label{
-    color:#d4af37;
-    font-size:11px;
-    font-weight:bold;
-    letter-spacing:3px;
-    margin-bottom:10px;
-}
-
-.section-title{
-    font-size:38px;
-    margin-bottom:25px;
-}
-
-
-/* =========================
-   ARTISTS GRID
-========================= */
-
-.artists-grid{
+.artist-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:14px;
 }
 
-
-/* =========================
-   ARTIST CARD
-========================= */
+/* ARTIST CARD */
 
 .artist-card{
     position:relative;
-    min-height:390px;
+    min-height:430px;
+
     overflow:hidden;
 
     border:1px solid #302a16;
-
-    background:
-        linear-gradient(
-            145deg,
-            #211a08,
-            #080808
-        );
+    background:#0d0d0d;
 
     transition:.3s;
 }
 
 .artist-card:hover{
     transform:translateY(-5px);
-
     border-color:#d4af37;
-
-    box-shadow:
-        0 15px 40px rgba(212,175,55,.08);
+    box-shadow:0 15px 40px rgba(212,175,55,.1);
 }
 
-
-/* =========================
-   IMAGE AREA
-========================= */
+/* IMAGE */
 
 .artist-image{
-    height:250px;
+    position:absolute;
+    inset:0;
+
+    background:#151515;
+}
+
+.artist-image img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+}
+
+.artist-card:hover .artist-image img{
+    transform:scale(1.05);
+}
+
+/* OVERLAY */
+
+.artist-overlay{
+    position:absolute;
+    inset:0;
 
     display:flex;
-    align-items:center;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    padding:28px;
 
     background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(212,175,55,.22),
-            transparent 35%
-        ),
         linear-gradient(
-            135deg,
-            #33270c,
-            #090909
+            transparent 30%,
+            rgba(0,0,0,.92) 100%
         );
-
-    color:rgba(212,175,55,.25);
-
-    font-size:75px;
-    font-weight:900;
-
-    overflow:hidden;
 }
 
-
-/* =========================
-   CARD CONTENT
-========================= */
-
-.artist-content{
-    padding:22px;
-}
-
-.artist-category{
+.artist-label{
     color:#d4af37;
-    font-size:9px;
+    font-size:10px;
     font-weight:bold;
     letter-spacing:3px;
-    margin-bottom:9px;
+    margin-bottom:8px;
 }
 
-.artist-content h3{
-    font-size:26px;
+.artist-overlay h2{
+    font-size:32px;
     line-height:1;
 }
 
-.artist-content p{
-    color:#777;
+.artist-overlay p{
+    color:#bbb;
     font-size:12px;
     margin-top:8px;
 }
 
-.artist-button{
+.artist-link{
     display:inline-block;
 
-    margin-top:18px;
+    width:max-content;
+
+    margin-top:17px;
 
     border:1px solid #d4af37;
     color:#d4af37;
 
-    padding:9px 15px;
+    padding:9px 14px;
 
     font-size:10px;
     font-weight:bold;
@@ -290,123 +246,23 @@ main{
     transition:.2s;
 }
 
-.artist-button:hover{
+.artist-link:hover{
     background:#d4af37;
     color:#050505;
 }
 
+/* FEATURE CARD */
 
-/* =========================
-   FEATURED ARTIST
-========================= */
-
-.featured-artist{
+.artist-card.featured{
     grid-column:span 2;
-    min-height:430px;
-
-    background:
-        radial-gradient(
-            circle at 70% 30%,
-            rgba(212,175,55,.3),
-            transparent 30%
-        ),
-        linear-gradient(
-            135deg,
-            #251d08,
-            #080808
-        );
+    min-height:500px;
 }
 
-.featured-artist .artist-image{
-    height:285px;
-
-    background:
-        radial-gradient(
-            circle at 70% 35%,
-            rgba(212,175,55,.35),
-            transparent 28%
-        ),
-        linear-gradient(
-            135deg,
-            #493a12,
-            #080808
-        );
+.artist-card.featured .artist-overlay h2{
+    font-size:42px;
 }
 
-.featured-badge{
-    position:absolute;
-
-    top:18px;
-    left:18px;
-
-    background:#d4af37;
-    color:#050505;
-
-    padding:8px 12px;
-
-    font-size:9px;
-    font-weight:bold;
-    letter-spacing:2px;
-
-    z-index:2;
-}
-
-
-/* =========================
-   INFO BOX
-========================= */
-
-.info-box{
-    margin-top:55px;
-
-    padding:35px;
-
-    border:1px solid #453919;
-
-    background:
-        linear-gradient(
-            100deg,
-            #171207,
-            #090909
-        );
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    gap:25px;
-}
-
-.info-box h2{
-    font-size:30px;
-}
-
-.info-box p{
-    color:#777;
-    font-size:13px;
-    margin-top:8px;
-}
-
-.info-button{
-    background:#d4af37;
-    color:#050505;
-
-    padding:15px 23px;
-
-    font-size:11px;
-    font-weight:bold;
-
-    white-space:nowrap;
-}
-
-.info-button:hover{
-    background:#f0d56a;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     border-top:1px solid #29230f;
@@ -433,6 +289,7 @@ footer{
     color:#666;
     font-size:12px;
     margin-top:8px;
+    line-height:1.5;
 }
 
 .footer-links{
@@ -449,10 +306,7 @@ footer{
     color:#d4af37;
 }
 
-
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media(max-width:900px){
 
@@ -467,30 +321,28 @@ footer{
         order:3;
         width:100%;
         overflow-x:auto;
+        padding-bottom:4px;
     }
 
     nav a{
         white-space:nowrap;
     }
 
-    .home-button{
+    .vote-button{
         display:none;
     }
 
-    .artists-grid{
+    .artist-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .featured-artist{
+    .artist-card.featured{
         grid-column:span 2;
     }
 
 }
 
-
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
@@ -503,34 +355,22 @@ footer{
         font-size:50px;
     }
 
-    .artists-grid{
+    .artist-grid{
         grid-template-columns:1fr;
     }
 
-    .featured-artist{
+    .artist-card,
+    .artist-card.featured{
         grid-column:span 1;
+        min-height:400px;
     }
 
-    .artist-card{
-        min-height:360px;
+    .artist-card.featured{
+        min-height:450px;
     }
 
-    .artist-image{
-        height:230px;
-    }
-
-    .featured-artist .artist-image{
-        height:250px;
-    }
-
-    .info-box{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    .info-button{
-        width:100%;
-        text-align:center;
+    .artist-card.featured .artist-overlay h2{
+        font-size:35px;
     }
 
     .footer-inner{
@@ -546,14 +386,9 @@ footer{
 }
 
 </style>
-
 </head>
 
-
 <body>
-
-
-<!-- HEADER -->
 
 <header>
 
@@ -572,7 +407,6 @@ footer{
         </div>
 
     </div>
-
 
     <nav>
 
@@ -596,323 +430,227 @@ footer{
             ÖDÜLLER
         </a>
 
+        <a href="index.html#hakkimizda">
+            HAKKIMIZDA
+        </a>
+
     </nav>
 
-
-    <a href="index.html" class="home-button">
-        ← ANA SAYFA
+    <a href="oylamalar.html" class="vote-button">
+        🗳 OY VER
     </a>
 
 </header>
 
 
-
-<!-- MAIN -->
-
 <main>
-
-
-    <!-- TITLE -->
 
     <div class="page-title">
 
         <small>
-            TSS ARTISTS • 2026
+            TSS ARTISTS 2026
         </small>
 
         <h1>
-            <span>SAHNE</span><br>
-            SENİN.
+            MÜZİĞİN<br>
+            <span>YÜZLERİ.</span>
         </h1>
 
         <p>
-            Türkiye müzik sahnesinin yükselen
-            gruplarını ve dikkat çeken isimlerini keşfet.
-            TSS sanatçı arşivine göz at.
+            Türkiye müzik sahnesinin öne çıkan gruplarını
+            keşfet. TSS'nin 2026 sanatçı arşivine göz at.
         </p>
 
     </div>
 
 
-
-    <!-- ARTISTS -->
-
-    <section>
-
-        <div class="section-label">
-            TSS ARTISTS
-        </div>
-
-        <h2 class="section-title">
-            Gruplar.
-        </h2>
+    <div class="artist-grid">
 
 
-        <div class="artists-grid">
+        <!-- MANIFEST -->
 
+        <article class="artist-card featured">
 
-            <!-- MANIFEST -->
+            <div class="artist-image">
 
-            <article class="artist-card featured-artist">
+                <img
+                    src="manifest.jpg"
+                    alt="Manifest"
+                >
 
-                <div class="featured-badge">
-                    ÖNE ÇIKAN
+            </div>
+
+            <div class="artist-overlay">
+
+                <div class="artist-label">
+                    TSS ARTIST
                 </div>
 
-                <div class="artist-image">
-                    M
+                <h2>
+                    MANIFEST
+                </h2>
+
+                <p>
+                    6 ÜYE • TÜRKİYE
+                </p>
+
+                <a href="oylamalar.html" class="artist-link">
+                    OYLAMALARDA GÖR →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- AURA -->
+
+        <article class="artist-card">
+
+            <div class="artist-image">
+
+                <img
+                    src="aura (4).jpg"
+                    alt="Aura"
+                >
+
+            </div>
+
+            <div class="artist-overlay">
+
+                <div class="artist-label">
+                    TSS ARTIST
                 </div>
 
-                <div class="artist-content">
+                <h2>
+                    AURA
+                </h2>
 
-                    <div class="artist-category">
-                        GIRL GROUP
-                    </div>
+                <p>
+                    GRUP • TÜRKİYE
+                </p>
 
-                    <h3>
-                        MANIFEST
-                    </h3>
+                <a href="oylamalar.html" class="artist-link">
+                    OYLAMADA GÖR →
+                </a>
 
-                    <p>
-                        6 ÜYE • TÜRKİYE
-                    </p>
+            </div>
 
-                    <a href="#" class="artist-button">
-                        PROFİLİ GÖR →
-                    </a>
+        </article>
 
+
+        <!-- MANTRA -->
+
+        <article class="artist-card">
+
+            <div class="artist-image">
+
+                <img
+                    src="mantra.jpg"
+                    alt="Mantra"
+                >
+
+            </div>
+
+            <div class="artist-overlay">
+
+                <div class="artist-label">
+                    TSS ARTIST
                 </div>
 
-            </article>
+                <h2>
+                    MANTRA
+                </h2>
+
+                <p>
+                    GRUP • TÜRKİYE
+                </p>
+
+                <a href="oylamalar.html" class="artist-link">
+                    OYLAMADA GÖR →
+                </a>
+
+            </div>
+
+        </article>
 
 
+        <!-- KARMA -->
 
-            <!-- AURA -->
+        <article class="artist-card">
 
-            <article class="artist-card">
+            <div class="artist-image">
 
-                <div class="artist-image">
-                    A
+                <img
+                    src="karm6.jpg"
+                    alt="Karma"
+                >
+
+            </div>
+
+            <div class="artist-overlay">
+
+                <div class="artist-label">
+                    TSS ARTIST
                 </div>
 
-                <div class="artist-content">
+                <h2>
+                    KARMA
+                </h2>
 
-                    <div class="artist-category">
-                        GROUP
-                    </div>
+                <p>
+                    GRUP • TÜRKİYE
+                </p>
 
-                    <h3>
-                        AURA
-                    </h3>
+                <a href="oylamalar.html" class="artist-link">
+                    OYLAMADA GÖR →
+                </a>
 
-                    <p>
-                        4 ÜYE • TÜRKİYE
-                    </p>
+            </div>
 
-                    <a href="#" class="artist-button">
-                        PROFİLİ GÖR →
-                    </a>
+        </article>
 
+
+        <!-- RADİKAL -->
+
+        <article class="artist-card">
+
+            <div class="artist-image">
+
+                <img
+                    src="Radik5l (1).jpg"
+                    alt="Radikal"
+                >
+
+            </div>
+
+            <div class="artist-overlay">
+
+                <div class="artist-label">
+                    TSS ARTIST
                 </div>
 
-            </article>
+                <h2>
+                    RADİKAL
+                </h2>
 
+                <p>
+                    GRUP • TÜRKİYE
+                </p>
 
+                <a href="oylamalar.html" class="artist-link">
+                    OYLAMADA GÖR →
+                </a>
 
-            <!-- MANTRA -->
+            </div>
 
-            <article class="artist-card">
+        </article>
 
-                <div class="artist-image">
-                    M
-                </div>
-
-                <div class="artist-content">
-
-                    <div class="artist-category">
-                        GROUP
-                    </div>
-
-                    <h3>
-                        MANTRA
-                    </h3>
-
-                    <p>
-                        5 ÜYE • TÜRKİYE
-                    </p>
-
-                    <a href="#" class="artist-button">
-                        PROFİLİ GÖR →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- RADİKAL -->
-
-            <article class="artist-card">
-
-                <div class="artist-image">
-                    R
-                </div>
-
-                <div class="artist-content">
-
-                    <div class="artist-category">
-                        GROUP
-                    </div>
-
-                    <h3>
-                        RADİKAL
-                    </h3>
-
-                    <p>
-                        GRUP • TÜRKİYE
-                    </p>
-
-                    <a href="#" class="artist-button">
-                        PROFİLİ GÖR →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- CRUSH -->
-
-            <article class="artist-card">
-
-                <div class="artist-image">
-                    C
-                </div>
-
-                <div class="artist-content">
-
-                    <div class="artist-category">
-                        GROUP
-                    </div>
-
-                    <h3>
-                        CRUSH!
-                    </h3>
-
-                    <p>
-                        GRUP • TÜRKİYE
-                    </p>
-
-                    <a href="#" class="artist-button">
-                        PROFİLİ GÖR →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- KARM6 -->
-
-            <article class="artist-card">
-
-                <div class="artist-image">
-                    K
-                </div>
-
-                <div class="artist-content">
-
-                    <div class="artist-category">
-                        GROUP
-                    </div>
-
-                    <h3>
-                        KARM6
-                    </h3>
-
-                    <p>
-                        GRUP • TÜRKİYE
-                    </p>
-
-                    <a href="#" class="artist-button">
-                        PROFİLİ GÖR →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- YENİ İSİMLER -->
-
-            <article class="artist-card">
-
-                <div class="artist-image">
-                    ★
-                </div>
-
-                <div class="artist-content">
-
-                    <div class="artist-category">
-                        YÜKSELEN
-                    </div>
-
-                    <h3>
-                        YENİ İSİMLER
-                    </h3>
-
-                    <p>
-                        YÜKSELEN SANATÇILAR
-                    </p>
-
-                    <a href="#" class="artist-button">
-                        KEŞFET →
-                    </a>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- INFO -->
-
-    <div class="info-box">
-
-        <div>
-
-            <h2>
-                Favori grubunu buldun mu?
-            </h2>
-
-            <p>
-                TSS Awards 2026'da favori adayına
-                oy vermeyi unutma.
-            </p>
-
-        </div>
-
-        <a href="oylamalar.html" class="info-button">
-            OYLAMALARA GİT →
-        </a>
 
     </div>
 
-
 </main>
 
-
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -925,11 +663,11 @@ footer{
             </div>
 
             <div class="footer-text">
-                Türkiye Stage Show • TSS Artists 2026
+                Türkiye Stage Show<br>
+                © 2026 Tüm hakları saklıdır.
             </div>
 
         </div>
-
 
         <div class="footer-links">
 
@@ -939,10 +677,6 @@ footer{
 
             <a href="haberler.html">
                 HABERLER
-            </a>
-
-            <a href="sanatcilar.html">
-                SANATÇILAR
             </a>
 
             <a href="oylamalar.html">
@@ -959,6 +693,6 @@ footer{
 
 </footer>
 
-
 </body>
 </html>
+```
