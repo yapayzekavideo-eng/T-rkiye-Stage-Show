@@ -31,7 +31,10 @@ a{
     text-decoration:none;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     min-height:76px;
@@ -94,7 +97,9 @@ nav a:hover{
 }
 
 
-/* AUTH HEADER */
+/* =========================
+   AUTH HEADER
+========================= */
 
 .header-auth{
     display:flex;
@@ -155,17 +160,20 @@ nav a:hover{
 }
 
 
-/* MAIN */
+/* =========================
+   MAIN
+========================= */
 
 main{
     width:92%;
     max-width:1350px;
-
     margin:40px auto 80px;
 }
 
 
-/* TITLE */
+/* =========================
+   TITLE
+========================= */
 
 .page-title{
     margin-bottom:35px;
@@ -173,21 +181,15 @@ main{
 
 .page-title small{
     color:#d4af37;
-
     letter-spacing:4px;
-
     font-size:11px;
-
     font-weight:bold;
 }
 
 .page-title h1{
     font-size:clamp(45px,7vw,80px);
-
     letter-spacing:-4px;
-
     line-height:.9;
-
     margin-top:10px;
 }
 
@@ -197,20 +199,18 @@ main{
 
 .page-title p{
     color:#888;
-
     max-width:650px;
-
     margin-top:18px;
-
     line-height:1.6;
 }
 
 
-/* CATEGORY */
+/* =========================
+   CATEGORY
+========================= */
 
 .category{
     position:relative;
-
     overflow:hidden;
 
     border:1px solid #453919;
@@ -234,55 +234,45 @@ main{
 
 .category-number{
     position:absolute;
-
     top:20px;
     right:30px;
 
     color:rgba(212,175,55,.18);
 
     font-size:100px;
-
     font-weight:900;
 }
 
 .category-icon{
     font-size:48px;
-
     margin-bottom:25px;
 }
 
 .category-label{
     color:#d4af37;
-
     font-size:10px;
-
     font-weight:bold;
-
     letter-spacing:3px;
-
     margin-bottom:10px;
 }
 
 .category h2{
     font-size:40px;
-
     line-height:1;
 }
 
 .category p{
     color:#888;
-
     max-width:550px;
-
     margin-top:14px;
-
     font-size:13px;
-
     line-height:1.5;
 }
 
 
-/* VOTING AREA */
+/* =========================
+   VOTING
+========================= */
 
 .voting-area{
     margin-top:45px;
@@ -290,30 +280,25 @@ main{
 
 .section-label{
     color:#d4af37;
-
     font-size:11px;
-
     font-weight:bold;
-
     letter-spacing:3px;
-
     margin-bottom:10px;
 }
 
 .section-title{
     font-size:38px;
-
     margin-bottom:25px;
 }
 
 
-/* NOMINEES */
+/* =========================
+   NOMINEES
+========================= */
 
 .nominees{
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:15px;
 }
 
@@ -335,7 +320,6 @@ main{
 
 .nominee:hover{
     transform:translateY(-5px);
-
     border-color:#806b2d;
 }
 
@@ -351,7 +335,6 @@ main{
 
 .nominee-image{
     width:100%;
-
     height:235px;
 
     overflow:hidden;
@@ -361,7 +344,6 @@ main{
 
 .nominee-image img{
     width:100%;
-
     height:100%;
 
     object-fit:cover;
@@ -416,14 +398,12 @@ main{
 
 .nominee.selected .select-button{
     background:#d4af37;
-
     border-color:#d4af37;
-
     color:#050505;
 }
 
 
-/* VOTE COUNT */
+/* OY SAYISI */
 
 .vote-count{
     margin-top:12px;
@@ -458,7 +438,6 @@ main{
 
 .total-votes strong{
     color:#d4af37;
-
     font-size:18px;
 }
 
@@ -482,11 +461,9 @@ main{
     border-radius:50%;
 
     background:#d4af37;
-
     color:#050505;
 
     font-size:18px;
-
     font-weight:bold;
 
     z-index:5;
@@ -497,7 +474,9 @@ main{
 }
 
 
-/* SEND VOTE */
+/* =========================
+   SEND
+========================= */
 
 .submit-area{
     margin-top:30px;
@@ -516,7 +495,6 @@ main{
     display:flex;
 
     align-items:center;
-
     justify-content:space-between;
 
     gap:25px;
@@ -559,7 +537,9 @@ main{
 }
 
 
-/* AUTH MODAL */
+/* =========================
+   AUTH MODAL
+========================= */
 
 .modal{
     display:none;
@@ -573,7 +553,6 @@ main{
     z-index:3000;
 
     align-items:center;
-
     justify-content:center;
 
     padding:20px;
@@ -585,7 +564,6 @@ main{
 
 .auth-card{
     width:100%;
-
     max-width:430px;
 
     background:#0b0b0b;
@@ -695,7 +673,9 @@ main{
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     border-top:1px solid #29230f;
@@ -735,13 +715,11 @@ footer{
 
 .footer-links{
     display:flex;
-
     gap:20px;
 }
 
 .footer-links a{
     color:#777;
-
     font-size:11px;
 }
 
@@ -750,7 +728,9 @@ footer{
 }
 
 
-/* TABLET */
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:900px){
 
@@ -783,13 +763,14 @@ footer{
 }
 
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:600px){
 
     main{
         width:94%;
-
         margin-top:28px;
     }
 
@@ -799,7 +780,6 @@ footer{
 
     .category{
         min-height:280px;
-
         padding:25px;
     }
 
@@ -821,7 +801,6 @@ footer{
 
     .submit-area{
         flex-direction:column;
-
         align-items:flex-start;
     }
 
@@ -831,9 +810,7 @@ footer{
 
     .footer-inner{
         flex-direction:column;
-
         align-items:flex-start;
-
         gap:25px;
     }
 
@@ -847,7 +824,6 @@ footer{
 
     .auth-btn{
         padding:8px 9px;
-
         font-size:9px;
     }
 
@@ -861,7 +837,9 @@ footer{
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
@@ -907,8 +885,6 @@ footer{
     </nav>
 
 
-    <!-- GİRİŞ / KAYIT -->
-
     <div
         id="authArea"
         class="header-auth"
@@ -930,8 +906,6 @@ footer{
 
     </div>
 
-
-    <!-- KULLANICI -->
 
     <div
         id="userBox"
@@ -955,12 +929,12 @@ footer{
 </header>
 
 
-<!-- MAIN -->
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
-
-    <!-- PAGE TITLE -->
 
     <div class="page-title">
 
@@ -982,8 +956,6 @@ footer{
 
     </div>
 
-
-    <!-- CATEGORY -->
 
     <div class="category">
 
@@ -1011,8 +983,6 @@ footer{
 
     </div>
 
-
-    <!-- VOTING -->
 
     <section
         class="voting-area"
@@ -1294,11 +1264,8 @@ footer{
 
             </div>
 
-
         </div>
 
-
-        <!-- TOTAL VOTES -->
 
         <div class="total-votes">
 
@@ -1310,8 +1277,6 @@ footer{
 
         </div>
 
-
-        <!-- SEND -->
 
         <div class="submit-area">
 
@@ -1343,7 +1308,9 @@ footer{
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1387,7 +1354,9 @@ footer{
 </footer>
 
 
-<!-- AUTH MODAL -->
+<!-- =========================
+     AUTH MODAL
+========================= -->
 
 <div
     id="authModal"
@@ -1481,17 +1450,15 @@ footer{
 
 <script>
 
-/* ==========================================
+/* =========================
    SUPABASE
-========================================== */
+========================= */
 
 const SUPABASE_URL =
 "https://jpanrsaitxebjuapwpet.supabase.co";
 
-
 const SUPABASE_KEY =
 "sb_publishable_OmM-52eGk8NnNrLS7I25GQ_MGQkwJw5";
-
 
 const supabaseClient =
 window.supabase.createClient(
@@ -1500,22 +1467,21 @@ window.supabase.createClient(
 );
 
 
-/* ==========================================
+/* =========================
    AYARLAR
-========================================== */
+========================= */
 
 const CATEGORY =
 "Yılın Yaz Şarkısı";
-
 
 let selected = null;
 
 let authMode = "signup";
 
 
-/* ==========================================
+/* =========================
    ADAY SEÇİMİ
-========================================== */
+========================= */
 
 const nominees =
 document.querySelectorAll(".nominee");
@@ -1529,21 +1495,16 @@ nominees.forEach(function(nominee){
 
             nominees.forEach(function(item){
 
-                item.classList.remove(
-                    "selected"
-                );
+                item.classList.remove("selected");
 
             });
 
-
-            nominee.classList.add(
-                "selected"
-            );
-
+            nominee.classList.add("selected");
 
             selected =
-                nominee
-                .getAttribute("data-candidate");
+                nominee.getAttribute(
+                    "data-candidate"
+                );
 
         }
     );
@@ -1551,39 +1512,33 @@ nominees.forEach(function(nominee){
 });
 
 
-/* ==========================================
+/* =========================
    AUTH MODAL
-========================================== */
+========================= */
 
 function openAuth(mode){
 
     authMode = mode;
 
-
     document
         .getElementById("authModal")
         .classList.add("show");
-
 
     document
         .getElementById("authEmail")
         .value = "";
 
-
     document
         .getElementById("authPassword")
         .value = "";
-
 
     document
         .getElementById("authPassword2")
         .value = "";
 
-
     document
         .getElementById("authMessage")
         .textContent = "";
-
 
     updateAuthUI();
 
@@ -1606,11 +1561,9 @@ function switchAuth(){
         ? "login"
         : "signup";
 
-
     document
         .getElementById("authMessage")
         .textContent = "";
-
 
     updateAuthUI();
 
@@ -1622,14 +1575,12 @@ function updateAuthUI(){
     const signup =
         authMode === "signup";
 
-
     document
         .getElementById("authTitle")
         .textContent =
             signup
             ? "Kayıt Ol"
             : "Giriş Yap";
-
 
     document
         .getElementById("authDescription")
@@ -1638,14 +1589,12 @@ function updateAuthUI(){
             ? "TSS oylamalarına katılmak için ücretsiz hesabını oluştur."
             : "Oy kullanmak için hesabına giriş yap.";
 
-
     document
         .getElementById("authSubmit")
         .textContent =
             signup
             ? "KAYIT OL"
             : "GİRİŞ YAP";
-
 
     document
         .getElementById("authPassword2")
@@ -1654,14 +1603,12 @@ function updateAuthUI(){
             ? "block"
             : "none";
 
-
     document
         .getElementById("switchText")
         .textContent =
             signup
             ? "Zaten hesabın var mı?"
             : "Hesabın yok mu?";
-
 
     document
         .getElementById("switchButton")
@@ -1673,9 +1620,9 @@ function updateAuthUI(){
 }
 
 
-/* ==========================================
+/* =========================
    KAYIT / GİRİŞ
-========================================== */
+========================= */
 
 async function submitAuth(){
 
@@ -1685,12 +1632,10 @@ async function submitAuth(){
         .value
         .trim();
 
-
     const password =
         document
         .getElementById("authPassword")
         .value;
-
 
     const message =
         document
@@ -1707,7 +1652,9 @@ async function submitAuth(){
     }
 
 
-    /* KAYIT */
+    /* =====================
+       KAYIT
+    ===================== */
 
     if(authMode === "signup"){
 
@@ -1737,6 +1684,11 @@ async function submitAuth(){
         }
 
 
+        /*
+          EMAIL CONFIRMATION SONRASI
+          KULLANICI BURAYA DÖNECEK
+        */
+
         const {
             data,
             error
@@ -1745,14 +1697,23 @@ async function submitAuth(){
             .auth
             .signUp({
 
-                email:email,
+                email: email,
 
-                password:password
+                password: password,
+
+                options: {
+
+                    emailRedirectTo:
+                        "https://turkshowstage.netlify.app/oylamalar.html"
+
+                }
 
             });
 
 
         if(error){
+
+            console.error(error);
 
             message.textContent =
                 error.message;
@@ -1763,8 +1724,8 @@ async function submitAuth(){
 
 
         /*
-          Supabase'de email doğrulaması
-          açıksa session hemen oluşmayabilir.
+          Email doğrulaması açık ise
+          session hemen oluşmayabilir.
         */
 
         if(data.session){
@@ -1780,15 +1741,18 @@ async function submitAuth(){
         else{
 
             message.textContent =
-                "Kayıt başarılı! " +
-                "E-postanı kontrol edip hesabını doğrula.";
+                "Kayıt başarılı! 🎉 " +
+                "E-posta adresine gönderilen " +
+                "doğrulama bağlantısına tıkla.";
 
         }
 
     }
 
 
-    /* GİRİŞ */
+    /* =====================
+       GİRİŞ
+    ===================== */
 
     else{
 
@@ -1799,9 +1763,9 @@ async function submitAuth(){
             .auth
             .signInWithPassword({
 
-                email:email,
+                email: email,
 
-                password:password
+                password: password
 
             });
 
@@ -1828,9 +1792,9 @@ async function submitAuth(){
 }
 
 
-/* ==========================================
+/* =========================
    ÇIKIŞ
-========================================== */
+========================= */
 
 async function logout(){
 
@@ -1838,9 +1802,7 @@ async function logout(){
         .auth
         .signOut();
 
-
     selected = null;
-
 
     nominees.forEach(function(item){
 
@@ -1850,7 +1812,6 @@ async function logout(){
 
     });
 
-
     await updateUserUI();
 
     await checkTodayVote();
@@ -1858,9 +1819,9 @@ async function logout(){
 }
 
 
-/* ==========================================
+/* =========================
    KULLANICI DURUMU
-========================================== */
+========================= */
 
 async function updateUserUI(){
 
@@ -1906,9 +1867,9 @@ async function updateUserUI(){
 }
 
 
-/* ==========================================
-   BUGÜN OY KULLANILDI MI?
-========================================== */
+/* =========================
+   BUGÜN OY KULLANILDI MI
+========================= */
 
 async function checkTodayVote(){
 
@@ -1946,7 +1907,7 @@ async function checkTodayVote(){
         .rpc(
             "bugun_oy_kullanildi_mi",
             {
-                p_kategori:CATEGORY
+                p_kategori: CATEGORY
             }
         );
 
@@ -1973,9 +1934,9 @@ async function checkTodayVote(){
 }
 
 
-/* ==========================================
+/* =========================
    OY GÖNDER
-========================================== */
+========================= */
 
 async function sendVote(){
 
@@ -1989,8 +1950,6 @@ async function sendVote(){
         .getSession();
 
 
-    /* GİRİŞ YOK */
-
     if(!session){
 
         openAuth("login");
@@ -1999,8 +1958,6 @@ async function sendVote(){
 
     }
 
-
-    /* ADAY YOK */
 
     if(!selected){
 
@@ -2013,18 +1970,6 @@ async function sendVote(){
     }
 
 
-    /*
-      OY VERME
-
-      Supabase RPC:
-
-      oy_ver(
-          kategori,
-          aday
-      )
-
-    */
-
     const {
         error
     } =
@@ -2032,9 +1977,9 @@ async function sendVote(){
         .rpc(
             "oy_ver",
             {
-                p_kategori:CATEGORY,
+                p_kategori: CATEGORY,
 
-                p_aday:selected
+                p_aday: selected
             }
         );
 
@@ -2044,28 +1989,10 @@ async function sendVote(){
         console.error(error);
 
 
-        if(
+        alert(
+            "Oy gönderilemedi.\n\n" +
             error.message
-            .toLowerCase()
-            .includes("zaten")
-        ){
-
-            alert(
-                "Bugünkü oy hakkını zaten kullandın.\n\n" +
-                "Yarın tekrar oy verebilirsin."
-            );
-
-        }
-
-        else{
-
-            alert(
-                "Oy gönderilemedi.\n\n" +
-                error.message
-            );
-
-        }
-
+        );
 
         return;
 
@@ -2091,25 +2018,16 @@ async function sendVote(){
     selected = null;
 
 
-    /*
-      Sayaçları yeniden çek
-    */
-
     await loadVotes();
-
-
-    /*
-      Bugünkü hakkı güncelle
-    */
 
     await checkTodayVote();
 
 }
 
 
-/* ==========================================
+/* =========================
    GERÇEK OY SAYILARI
-========================================== */
+========================= */
 
 async function loadVotes(){
 
@@ -2149,8 +2067,7 @@ async function loadVotes(){
     nominees.forEach(function(card){
 
         const candidate =
-            card
-            .getAttribute(
+            card.getAttribute(
                 "data-candidate"
             );
 
@@ -2170,8 +2087,7 @@ async function loadVotes(){
 
 
         const counter =
-            card
-            .querySelector(
+            card.querySelector(
                 ".vote-count span"
             );
 
@@ -2201,9 +2117,9 @@ async function loadVotes(){
 }
 
 
-/* ==========================================
+/* =========================
    AUTH DEĞİŞİKLİĞİ
-========================================== */
+========================= */
 
 supabaseClient
 .auth
@@ -2218,9 +2134,9 @@ supabaseClient
 );
 
 
-/* ==========================================
+/* =========================
    SAYFA AÇILIŞI
-========================================== */
+========================= */
 
 (async function(){
 
