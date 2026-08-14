@@ -2,7 +2,6 @@
 <html lang="tr">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -32,14 +31,11 @@ a{
 }
 
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     min-height:76px;
     padding:0 5%;
-
     background:#050505;
     border-bottom:1px solid #29230f;
 
@@ -98,14 +94,10 @@ nav a:hover{
 .vote-top{
     border:1px solid #d4af37;
     color:#d4af37;
-
     padding:11px 20px;
-
     border-radius:4px;
-
     font-weight:bold;
     font-size:12px;
-
     transition:.2s;
 }
 
@@ -115,21 +107,16 @@ nav a:hover{
 }
 
 
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 
 main{
     width:92%;
     max-width:1350px;
-
     margin:35px auto 80px;
 }
 
 
-/* =========================
-   INTRO
-========================= */
+/* INTRO */
 
 .intro{
     margin-bottom:25px;
@@ -137,21 +124,15 @@ main{
 
 .intro small{
     color:#d4af37;
-
     font-size:11px;
-
     letter-spacing:4px;
-
     font-weight:bold;
 }
 
 .intro h1{
     font-size:clamp(45px,7vw,85px);
-
     line-height:.9;
-
     letter-spacing:-4px;
-
     margin-top:10px;
 }
 
@@ -161,41 +142,29 @@ main{
 
 .intro p{
     color:#888;
-
     max-width:600px;
-
     margin-top:18px;
-
     line-height:1.6;
 }
 
 
-/* =========================
-   MOSAIC
-========================= */
+/* MOSAIC */
 
 .mosaic{
     display:grid;
-
     grid-template-columns:repeat(12,1fr);
-
     grid-auto-rows:90px;
-
     gap:12px;
 }
 
 
-/* =========================
-   GENERAL CARD
-========================= */
+/* CARD */
 
 .card{
     position:relative;
-
     overflow:hidden;
 
     border:1px solid #302a16;
-
     background:#0d0d0d;
 
     transition:.3s;
@@ -203,24 +172,18 @@ main{
 
 .card:hover{
     transform:translateY(-4px);
-
     border-color:#d4af37;
-
-    box-shadow:
-        0 15px 40px rgba(212,175,55,.08);
+    box-shadow:0 15px 40px rgba(212,175,55,.08);
 }
 
 .card-content{
     position:absolute;
-
     inset:0;
 
     padding:25px;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:flex-end;
 
     background:
@@ -232,40 +195,29 @@ main{
 
 .card-label{
     color:#d4af37;
-
     font-size:10px;
-
     font-weight:bold;
-
     letter-spacing:2px;
-
     margin-bottom:8px;
 }
 
 .card h2{
     font-size:28px;
-
     line-height:1;
 }
 
 .card p{
     color:#aaa;
-
     font-size:12px;
-
     margin-top:8px;
-
     line-height:1.5;
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero-card{
     grid-column:span 8;
-
     grid-row:span 5;
 
     background:
@@ -285,27 +237,20 @@ main{
     content:"TSS";
 
     position:absolute;
-
     right:-30px;
     bottom:-80px;
 
     font-size:250px;
-
     font-weight:900;
 
     color:rgba(212,175,55,.035);
-
-    pointer-events:none;
 }
 
 
-/* =========================
-   NEWS
-========================= */
+/* NEWS */
 
 .news-one{
     grid-column:span 4;
-
     grid-row:span 3;
 
     background:
@@ -318,7 +263,6 @@ main{
 
 .news-two{
     grid-column:span 4;
-
     grid-row:span 2;
 
     background:
@@ -331,7 +275,6 @@ main{
 
 .news-three{
     grid-column:span 4;
-
     grid-row:span 2;
 
     background:
@@ -343,13 +286,10 @@ main{
 }
 
 
-/* =========================
-   VOTE
-========================= */
+/* VOTE */
 
 .vote-card{
     grid-column:span 4;
-
     grid-row:span 3;
 
     background:
@@ -367,42 +307,29 @@ main{
 
 .vote-card .big-icon{
     font-size:48px;
-
     margin-bottom:auto;
 }
 
 .vote-link{
     display:inline-block;
-
     margin-top:16px;
 
     padding:12px 20px;
 
     background:#d4af37;
-
     color:#050505;
 
     font-size:12px;
-
     font-weight:bold;
 
     border-radius:3px;
-
-    transition:.2s;
-}
-
-.vote-link:hover{
-    background:#f0d56a;
 }
 
 
-/* =========================
-   ARTISTS
-========================= */
+/* ARTISTS */
 
 .artists-card{
     grid-column:span 8;
-
     grid-row:span 3;
 
     background:#0b0b0b;
@@ -410,19 +337,15 @@ main{
 
 .artist-mini-grid{
     position:absolute;
-
     inset:0;
 
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
 }
 
 .artist-mini{
     position:relative;
-
     border-right:1px solid #282313;
-
     overflow:hidden;
 }
 
@@ -431,55 +354,34 @@ main{
 }
 
 .artist-mini:nth-child(1){
-    background:
-        linear-gradient(
-            145deg,
-            #514316,
-            #080808
-        );
+    background:linear-gradient(145deg,#514316,#080808);
 }
 
 .artist-mini:nth-child(2){
-    background:
-        linear-gradient(
-            145deg,
-            #3f3515,
-            #080808
-        );
+    background:linear-gradient(145deg,#3f3515,#080808);
 }
 
 .artist-mini:nth-child(3){
-    background:
-        linear-gradient(
-            145deg,
-            #66551c,
-            #080808
-        );
+    background:linear-gradient(145deg,#66551c,#080808);
 }
 
 .artist-mini span{
     position:absolute;
-
     left:15px;
-
     bottom:15px;
 
     font-size:16px;
-
     font-weight:900;
 }
 
 .artists-overlay{
     position:absolute;
-
     inset:0;
 
     padding:22px;
 
     display:flex;
-
     align-items:flex-start;
-
     justify-content:space-between;
 
     background:
@@ -494,22 +396,17 @@ main{
     font-size:28px;
 }
 
-.artists-overlay a{
+.artists-overlay span{
     color:#d4af37;
-
     font-size:11px;
-
     font-weight:bold;
 }
 
 
-/* =========================
-   AWARDS
-========================= */
+/* AWARDS */
 
 .awards-card{
     grid-column:span 4;
-
     grid-row:span 3;
 
     background:
@@ -523,18 +420,14 @@ main{
 
 .trophy{
     font-size:52px;
-
     margin-bottom:auto;
 }
 
 
-/* =========================
-   BIG NEWS
-========================= */
+/* BIG NEWS */
 
 .big-news{
     grid-column:span 8;
-
     grid-row:span 3;
 
     background:
@@ -546,13 +439,10 @@ main{
 }
 
 
-/* =========================
-   SMALL NEWS
-========================= */
+/* SMALL NEWS */
 
 .small-news{
     grid-column:span 4;
-
     grid-row:span 3;
 
     background:
@@ -564,19 +454,14 @@ main{
 }
 
 
-/* =========================
-   BOTTOM CTA
-========================= */
+/* BOTTOM */
 
 .bottom-card{
     grid-column:span 12;
-
     grid-row:span 2;
 
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
 
     padding:35px;
@@ -599,77 +484,54 @@ main{
 
 .bottom-button{
     background:#d4af37;
-
     color:#050505;
 
     padding:15px 25px;
 
     font-weight:bold;
-
     font-size:13px;
 
     border-radius:3px;
-
-    transition:.2s;
-}
-
-.bottom-button:hover{
-    background:#f0d56a;
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     border-top:1px solid #29230f;
-
     padding:45px 5%;
-
     background:#030303;
 }
 
 .footer-inner{
     max-width:1350px;
-
     margin:auto;
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 }
 
 .footer-logo{
     color:#d4af37;
-
     font-size:30px;
-
     font-weight:900;
 }
 
 .footer-text{
     color:#666;
-
     font-size:12px;
-
     line-height:1.6;
 }
 
 .footer-links{
     display:flex;
-
     gap:20px;
 }
 
 .footer-links a{
     color:#777;
-
     font-size:11px;
-
-    transition:.2s;
 }
 
 .footer-links a:hover{
@@ -677,29 +539,21 @@ footer{
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* TABLET */
 
 @media(max-width:900px){
 
     header{
         height:auto;
-
         padding:17px 5%;
-
         flex-wrap:wrap;
-
         gap:15px;
     }
 
     nav{
         order:3;
-
         width:100%;
-
         overflow-x:auto;
-
         padding-bottom:4px;
     }
 
@@ -713,7 +567,6 @@ footer{
 
     .mosaic{
         grid-template-columns:repeat(6,1fr);
-
         grid-auto-rows:90px;
     }
 
@@ -760,27 +613,22 @@ footer{
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:600px){
 
     main{
         width:94%;
-
         margin-top:25px;
     }
 
     .intro h1{
         font-size:48px;
-
         letter-spacing:-3px;
     }
 
     .mosaic{
         display:flex;
-
         flex-direction:column;
     }
 
@@ -811,9 +659,7 @@ footer{
         min-height:230px;
 
         flex-direction:column;
-
         align-items:flex-start;
-
         justify-content:center;
 
         gap:25px;
@@ -823,15 +669,9 @@ footer{
         font-size:30px;
     }
 
-    .artist-mini-grid{
-        height:100%;
-    }
-
     .footer-inner{
         flex-direction:column;
-
         align-items:flex-start;
-
         gap:25px;
     }
 
@@ -849,9 +689,7 @@ footer{
 <body>
 
 
-<!-- =========================
-     HEADER
-========================= -->
+<!-- HEADER -->
 
 <header>
 
@@ -894,7 +732,7 @@ footer{
             ÖDÜLLER
         </a>
 
-        <a href="index.html#hakkimizda">
+        <a href="#hakkimizda">
             HAKKIMIZDA
         </a>
 
@@ -909,9 +747,7 @@ footer{
 
 
 
-<!-- =========================
-     MAIN
-========================= -->
+<!-- MAIN -->
 
 <main>
 
@@ -939,9 +775,7 @@ footer{
 
 
 
-    <!-- =========================
-         MOSAIC
-    ========================= -->
+    <!-- MOSAIC -->
 
     <div class="mosaic">
 
@@ -1074,9 +908,7 @@ footer{
 
 
 
-        <!-- =========================
-             ARTISTS
-        ========================= -->
+        <!-- ARTISTS -->
 
         <a href="sanatcilar.html" class="card artists-card">
 
@@ -1102,7 +934,7 @@ footer{
                     SANATÇILAR
                 </h2>
 
-                <span style="color:#d4af37;font-size:11px;font-weight:bold;">
+                <span>
                     TÜMÜNÜ GÖR →
                 </span>
 
@@ -1112,9 +944,7 @@ footer{
 
 
 
-        <!-- =========================
-             AWARDS
-        ========================= -->
+        <!-- AWARDS -->
 
         <a href="oduller.html" class="card awards-card">
 
@@ -1143,9 +973,7 @@ footer{
 
 
 
-        <!-- =========================
-             BIG NEWS
-        ========================= -->
+        <!-- BIG NEWS -->
 
         <a href="haberler.html" class="card big-news">
 
@@ -1171,9 +999,7 @@ footer{
 
 
 
-        <!-- =========================
-             SMALL NEWS
-        ========================= -->
+        <!-- SMALL NEWS -->
 
         <a href="haberler.html" class="card small-news">
 
@@ -1194,9 +1020,7 @@ footer{
 
 
 
-        <!-- =========================
-             BOTTOM
-        ========================= -->
+        <!-- BOTTOM -->
 
         <article class="card bottom-card">
 
@@ -1225,9 +1049,7 @@ footer{
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer id="hakkimizda">
 
