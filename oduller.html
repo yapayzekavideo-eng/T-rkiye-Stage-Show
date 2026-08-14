@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TSS Awards 2026 | Türkiye Stage Show</title>
+
+<style>
+
+/* =========================
+   GENEL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050505;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    min-height:76px;
+    padding:0 5%;
+
+    background:#050505;
+    border-bottom:1px solid #29230f;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-main{
+    color:#d4af37;
+    font-size:36px;
+    font-weight:900;
+    letter-spacing:-2px;
+}
+
+.logo-line{
+    width:1px;
+    height:34px;
+    background:#665521;
+}
+
+.logo-text{
+    color:#aaa;
+    font-size:9px;
+    line-height:1.1;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+nav{
+    display:flex;
+    gap:27px;
+}
+
+nav a{
+    color:#ddd;
+    font-size:12px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.home-button{
+    border:1px solid #d4af37;
+
+    color:#d4af37;
+
+    padding:11px 20px;
+
+    border-radius:4px;
+
+    font-size:12px;
+    font-weight:bold;
+
+    transition:.2s;
+}
+
+.home-button:hover{
+    background:#d4af37;
+    color:#050505;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main{
+    width:92%;
+    max-width:1350px;
+
+    margin:45px auto 90px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    position:relative;
+
+    min-height:430px;
+
+    border:1px solid #3b3014;
+
+    padding:55px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 35%,
+            rgba(212,175,55,.35),
+            transparent 27%
+        ),
+        radial-gradient(
+            circle at 30% 80%,
+            rgba(212,175,55,.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #211a08,
+            #070707 70%
+        );
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.hero:after{
+    content:"TSS";
+
+    position:absolute;
+
+    right:-50px;
+    bottom:-100px;
+
+    font-size:300px;
+    font-weight:900;
+
+    color:rgba(212,175,55,.035);
+
+    pointer-events:none;
+}
+
+.hero-label{
+    color:#d4af37;
+
+    font-size:11px;
+    font-weight:bold;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(55px,8vw,100px);
+
+    line-height:.85;
+
+    letter-spacing:-6px;
+
+    position:relative;
+    z-index:2;
+}
+
+.hero h1 span{
+    color:#d4af37;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#888;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    margin-top:25px;
+
+    position:relative;
+    z-index:2;
+}
+
+.hero-year{
+    position:absolute;
+
+    top:35px;
+    right:40px;
+
+    color:rgba(212,175,55,.18);
+
+    font-size:70px;
+    font-weight:900;
+
+    z-index:1;
+}
+
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header{
+    margin-top:65px;
+    margin-bottom:25px;
+}
+
+.section-label{
+    color:#d4af37;
+
+    font-size:10px;
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+}
+
+.section-header h2{
+    font-size:42px;
+
+    letter-spacing:-2px;
+}
+
+.section-header p{
+    color:#777;
+
+    font-size:13px;
+
+    margin-top:9px;
+}
+
+
+/* =========================
+   AWARD GRID
+========================= */
+
+.awards-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+}
+
+
+/* =========================
+   AWARD CARD
+========================= */
+
+.award-card{
+    position:relative;
+
+    min-height:330px;
+
+    padding:35px;
+
+    overflow:hidden;
+
+    border:1px solid #302a16;
+
+    background:
+        linear-gradient(
+            145deg,
+            #171207,
+            #080808
+        );
+
+    transition:.3s;
+}
+
+.award-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#d4af37;
+
+    box-shadow:
+        0 15px 45px rgba(212,175,55,.08);
+}
+
+.award-number{
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    color:rgba(212,175,55,.12);
+
+    font-size:75px;
+
+    font-weight:900;
+}
+
+.award-icon{
+    font-size:48px;
+
+    margin-bottom:35px;
+}
+
+.award-category{
+    color:#d4af37;
+
+    font-size:10px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+}
+
+.award-card h3{
+    font-size:30px;
+
+    line-height:1;
+
+    max-width:350px;
+}
+
+.award-description{
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    margin-top:14px;
+
+    max-width:450px;
+}
+
+
+/* =========================
+   WINNER AREA
+========================= */
+
+.winner-box{
+    margin-top:28px;
+
+    padding:18px;
+
+    border:1px solid #292929;
+
+    background:#090909;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.winner-status{
+    display:flex;
+
+    align-items:center;
+
+    gap:13px;
+}
+
+.status-icon{
+    width:40px;
+    height:40px;
+
+    border:1px solid #594a20;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#d4af37;
+
+    font-size:18px;
+}
+
+.status-text small{
+    display:block;
+
+    color:#555;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    margin-bottom:4px;
+}
+
+.status-text strong{
+    color:#999;
+
+    font-size:12px;
+}
+
+.status-badge{
+    padding:8px 11px;
+
+    border:1px solid #403719;
+
+    color:#806f35;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+}
+
+
+/* =========================
+   INFO
+========================= */
+
+.info-section{
+    margin-top:60px;
+
+    border:1px solid #302a16;
+
+    padding:35px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #151006,
+            #090909
+        );
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+}
+
+.info-section h2{
+    font-size:28px;
+}
+
+.info-section p{
+    color:#777;
+
+    font-size:13px;
+
+    line-height:1.6;
+
+    margin-top:8px;
+
+    max-width:650px;
+}
+
+.vote-button{
+    flex-shrink:0;
+
+    background:#d4af37;
+
+    color:#050505;
+
+    padding:15px 24px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    border-radius:3px;
+
+    transition:.2s;
+}
+
+.vote-button:hover{
+    background:#f0d56a;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    border-top:1px solid #29230f;
+
+    padding:45px 5%;
+
+    background:#030303;
+}
+
+.footer-inner{
+    max-width:1350px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.footer-logo{
+    color:#d4af37;
+
+    font-size:30px;
+
+    font-weight:900;
+}
+
+.footer-text{
+    color:#666;
+
+    font-size:12px;
+
+    margin-top:8px;
+
+    line-height:1.5;
+}
+
+.footer-links{
+    display:flex;
+
+    gap:20px;
+}
+
+.footer-links a{
+    color:#777;
+
+    font-size:11px;
+
+    transition:.2s;
+}
+
+.footer-links a:hover{
+    color:#d4af37;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    header{
+        padding:17px 5%;
+
+        flex-wrap:wrap;
+
+        gap:15px;
+    }
+
+    nav{
+        order:3;
+
+        width:100%;
+
+        overflow-x:auto;
+
+        padding-bottom:4px;
+    }
+
+    nav a{
+        white-space:nowrap;
+    }
+
+    .home-button{
+        display:none;
+    }
+
+    .hero{
+        padding:40px;
+
+        min-height:390px;
+    }
+
+    .awards-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    main{
+        width:94%;
+
+        margin-top:28px;
+    }
+
+    .hero{
+        min-height:390px;
+
+        padding:30px;
+    }
+
+    .hero h1{
+        font-size:55px;
+
+        letter-spacing:-4px;
+    }
+
+    .hero-year{
+        font-size:55px;
+
+        top:25px;
+        right:20px;
+    }
+
+    .hero p{
+        font-size:13px;
+    }
+
+    .section-header{
+        margin-top:45px;
+    }
+
+    .section-header h2{
+        font-size:34px;
+    }
+
+    .award-card{
+        min-height:330px;
+
+        padding:27px;
+    }
+
+    .award-card h3{
+        font-size:27px;
+    }
+
+    .winner-box{
+        align-items:flex-start;
+
+        flex-direction:column;
+    }
+
+    .status-badge{
+        width:100%;
+
+        text-align:center;
+    }
+
+    .info-section{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        padding:28px;
+    }
+
+    .vote-button{
+        width:100%;
+
+        text-align:center;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:25px;
+    }
+
+    .footer-links{
+        flex-wrap:wrap;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <div class="logo-main">
+            TSS
+        </div>
+
+        <div class="logo-line"></div>
+
+        <div class="logo-text">
+            TÜRKİYE<br>
+            STAGE<br>
+            SHOW
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            ANA SAYFA
+        </a>
+
+        <a href="haberler.html">
+            HABERLER
+        </a>
+
+        <a href="sanatcilar.html">
+            SANATÇILAR
+        </a>
+
+        <a href="oylamalar.html">
+            OYLAMALAR
+        </a>
+
+        <a href="oduller.html">
+            ÖDÜLLER
+        </a>
+
+        <a href="index.html#hakkimizda">
+            HAKKIMIZDA
+        </a>
+
+    </nav>
+
+
+    <a href="index.html" class="home-button">
+        ← ANA SAYFA
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-year">
+            2026
+        </div>
+
+        <div class="hero-label">
+            TÜRKİYE STAGE SHOW
+        </div>
+
+        <h1>
+            TSS<br>
+            <span>AWARDS</span>
+        </h1>
+
+        <p>
+            Türkiye müzik dünyasının 2026 yılında
+            en iyilerini belirlemek için oluşturulan
+            TSS Awards sonuç ve ödül platformu.
+        </p>
+
+    </section>
+
+
+
+    <!-- AWARDS HEADER -->
+
+    <div class="section-header">
+
+        <div class="section-label">
+            TSS AWARDS 2026
+        </div>
+
+        <h2>
+            Ödül Kategorileri
+        </h2>
+
+        <p>
+            2026'nın en iyileri burada açıklanacak.
+        </p>
+
+    </div>
+
+
+
+    <!-- AWARDS -->
+
+    <section class="awards-grid">
+
+
+        <!-- 01 -->
+
+        <article class="award-card">
+
+            <div class="award-number">
+                01
+            </div>
+
+            <div class="award-icon">
+                🏆
+            </div>
+
+            <div class="award-category">
+                ANA ÖDÜL
+            </div>
+
+            <h3>
+                YILIN GRUBU
+            </h3>
+
+            <p class="award-description">
+                2026 yılında müzik dünyasında
+                en büyük etkiyi yaratan grup.
+            </p>
+
+
+            <div class="winner-box">
+
+                <div class="winner-status">
+
+                    <div class="status-icon">
+                        🏆
+                    </div>
+
+                    <div class="status-text">
+
+                        <small>
+                            KAZANAN
+                        </small>
+
+                        <strong>
+                            Henüz açıklanmadı
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status-badge">
+                    OYLAMA DEVAM EDİYOR
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 02 -->
+
+        <article class="award-card">
+
+            <div class="award-number">
+                02
+            </div>
+
+            <div class="award-icon">
+                🎵
+            </div>
+
+            <div class="award-category">
+                MÜZİK
+            </div>
+
+            <h3>
+                YILIN ŞARKISI
+            </h3>
+
+            <p class="award-description">
+                2026 yılında dinleyicilerin
+                en çok sevdiği ve öne çıkan şarkı.
+            </p>
+
+
+            <div class="winner-box">
+
+                <div class="winner-status">
+
+                    <div class="status-icon">
+                        🎵
+                    </div>
+
+                    <div class="status-text">
+
+                        <small>
+                            KAZANAN
+                        </small>
+
+                        <strong>
+                            Henüz açıklanmadı
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status-badge">
+                    OYLAMA DEVAM EDİYOR
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 03 -->
+
+        <article class="award-card">
+
+            <div class="award-number">
+                03
+            </div>
+
+            <div class="award-icon">
+                ☀️
+            </div>
+
+            <div class="award-category">
+                YAZ 2026
+            </div>
+
+            <h3>
+                YILIN YAZ ŞARKISI
+            </h3>
+
+            <p class="award-description">
+                2026 yazına damgasını vuran
+                ve en unutulmaz hale gelen şarkı.
+            </p>
+
+
+            <div class="winner-box">
+
+                <div class="winner-status">
+
+                    <div class="status-icon">
+                        ☀️
+                    </div>
+
+                    <div class="status-text">
+
+                        <small>
+                            KAZANAN
+                        </small>
+
+                        <strong>
+                            Henüz açıklanmadı
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status-badge">
+                    OYLAMA DEVAM EDİYOR
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 04 -->
+
+        <article class="award-card">
+
+            <div class="award-number">
+                04
+            </div>
+
+            <div class="award-icon">
+                ⭐
+            </div>
+
+            <div class="award-category">
+                YÜKSELEN
+            </div>
+
+            <h3>
+                YILIN ÇIKIŞI
+            </h3>
+
+            <p class="award-description">
+                2026 yılında büyük bir çıkış
+                yakalayan yeni sanatçı veya grup.
+            </p>
+
+
+            <div class="winner-box">
+
+                <div class="winner-status">
+
+                    <div class="status-icon">
+                        ⭐
+                    </div>
+
+                    <div class="status-text">
+
+                        <small>
+                            KAZANAN
+                        </small>
+
+                        <strong>
+                            Henüz açıklanmadı
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="status-badge">
+                    OYLAMA DEVAM EDİYOR
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- INFO -->
+
+    <section class="info-section">
+
+        <div>
+
+            <h2>
+                Sen de kazananı belirle.
+            </h2>
+
+            <p>
+                TSS Awards 2026 kategorilerinde
+                favori adayına oy ver. Oylama
+                sonuçları tamamlandığında kazananlar
+                bu sayfada açıklanacak.
+            </p>
+
+        </div>
+
+
+        <a href="oylamalar.html" class="vote-button">
+            🗳 OYLAMALARA GİT →
+        </a>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+
+        <div>
+
+            <div class="footer-logo">
+                TSS
+            </div>
+
+            <div class="footer-text">
+                Türkiye Stage Show<br>
+                TSS Awards 2026<br>
+                © 2026 Tüm hakları saklıdır.
+            </div>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                ANA SAYFA
+            </a>
+
+            <a href="haberler.html">
+                HABERLER
+            </a>
+
+            <a href="sanatcilar.html">
+                SANATÇILAR
+            </a>
+
+            <a href="oylamalar.html">
+                OYLAMALAR
+            </a>
+
+            <a href="oduller.html">
+                ÖDÜLLER
+            </a>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+</body>
+
+  </html>
